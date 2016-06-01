@@ -1,0 +1,173 @@
+.order_registration {
+    width: 630px;
+}
+.order_registration form > div {
+    margin-bottom: 31px;
+}
+.order_registration form > div:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.col50 {
+    width: 52%;
+    float: left;
+}
+.col50:first-child {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: 30px;
+    width: 270px;
+}
+.title_section {
+    color: #60221a;
+    font-size: 18px;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: 'pf_din_text_comp_proregular', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.order_registration label {
+    position: relative;
+    width: 145px;
+    margin-bottom: 10px;
+    padding-right: 8px;s
+}
+.order_registration input[type="radio"] {
+    position: absolute;
+    margin-left: 0;
+    top: 2px;
+    left: 0;
+}
+.radio_item span {
+    display: inline-block;
+    float: left;
+    padding: 0 0 0 15px;
+}
+hr {
+    height: 3px;
+    background: #e1dcd9;
+    border: none;
+    outline: none;
+}
+.columns {
+    clear: both;
+    display: table;
+    margin-left: -49px;
+}
+.columns .column {
+    width: 190px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 49px;
+    margin-bottom: 24px;
+    padding: 28px 17px;
+    background: rgba(155,152,151,0.1);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background 0.3s ease-in-out 0.1s;
+    -moz-transition: background 0.3s ease-in-out 0.1s;
+    -o-transition: background 0.3s ease-in-out 0.1s;
+    transition: background 0.3s ease-in-out 0.1s;
+}
+.columns .column .title_section {
+    margin-bottom: 10px;
+}
+.columns .column > p {
+    font-size: 11px;
+    margin: 0;
+    text-align: left;
+    color: #3e2b22;
+}
+.iconed {
+    padding-left: 36px;
+    position: relative;
+    line-height: 30px;
+}
+p.iconed::after {
+    background-position: center center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 30px;
+}
+.iconed._visa::after {
+    background-image: url("../images/svg/visa.svg");
+}
+.iconed._mastercard::after {
+    background-image: url("../images/svg/mastercard.svg");
+}
+.iconed._maestro::after {
+    background-image: url("../images/svg/maestro.svg");
+}
+.iconed._mts::after {
+    background-image: url("../images/svg/mts.svg");
+}
+.iconed._megafon::after {
+    background-image: url("../images/svg/megafon.svg");
+}
+.iconed._beeline::after {
+    background-image: url("../images/svg/beeline.png");
+}
+.iconed._sberbank::after {
+    background-image: url("../images/svg/sberbank.svg");
+}
+.iconed._alfa::after {
+    background-image: url("../images/svg/alfa.png");
+}
+.iconed._masterpass::after {
+    background-image: url("../images/svg/masterpass.png");
+}
+.iconed._psb::after {
+    background-image: url("../images/svg/Artboard.svg");
+}
+.iconed._ya::after {
+    background-image: url("../images/svg/yamoney.svg");
+}
+.iconed._webmoney::after {
+    background-image: url("../images/svg/webmoney.svg");
+}
+.columns .column .links {
+    font-size: 14px;
+    height: 0;
+    line-height: 20px;
+    margin-top: 0;
+    position: relative;
+    text-align: left;
+    -webkit-transition: all 0.3s ease-in-out 0.1s;
+    -moz-transition: all 0.3s ease-in-out 0.1s;
+    -o-transition: all 0.3s ease-in-out 0.1s;
+    transition: all 0.3s ease-in-out 0.1s;
+    width: 100%;
+}
+.columns .column:hover {
+    background: #fefbfa;
+}
+.columns .column:hover .links {
+    height: 25px;
+}
+.columns .column .links a {
+    color: #bbb9b7;
+    text-decoration: underline;
+    font-size: 11px;  
+    font-style: italic;
+}
+.columns .column .links > a {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out 0.1s;
+    -moz-transition: all 0.3s ease-in-out 0.1s;
+    -o-transition: all 0.3s ease-in-out 0.1s;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.columns .column:hover .links > a {
+    opacity: 1;
+}
+._pl {
+    left: 35px;
+    top: -10px;
+}

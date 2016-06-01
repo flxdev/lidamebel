@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="./css/jquery.fancybox-1.3.4.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/scrolltabs.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/dropzone.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/slick.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/sale.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/custom.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/resp.css" type="text/css"/>
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if lte IE 6 ]><script type="text/javascript">window.location.href="ie6_close/index_ru.html";</script><![endif]-->
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox-1.3.4.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script type="text/javascript" src="js/ng_responsive_tables.js"></script> 
+        <script type="text/javascript" src="js/jquery.scrolltabs.js"></script>
+        <script type="text/javascript" src="js/dropzone.min.js"></script>
+        <script type="text/javascript" src="js/jquery.form-validator.min.js"></script> 
+        <script src="js/custom.js"></script>
+    </head>
+    <body>
+		<div class="preloader"></div>
+        <div id="wrap">
+            <header id="header">
+                <div class="center">
+                    <div class="logo"><a href="#"><img src="./images/logo.png"  alt="" /></a></div>
+                    <div class="header_right pr"> 
+                        <nav id="nav">
+                            <ul class="first_nav">
+                                <li><a href="#" class="active">Главная</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                            <ul class="second_nav">
+                                <li><a href="#">оплата</a></li>
+                                <li><a href="#">доставка и сборка</a></li>
+                                <li><a href="#">Опт</a></li>
+                                <li><a href="#"><i class="percent">%</i>Распродажа</a></li>                                
+                            </ul>
+                        </nav>
+                        <div class="back_call">
+                            <a href="javascript:void(0);" onclick="OpenWin('back_call_popup')">Обратный звонок</a>
+                        </div>
+                        <address class="tel_block">
+                            <p>Заказать по телефонам <br />
+                                с 9:00 до 20:00</p>
+                            <p class="tel">+7 (495) 495-20-60</p>
+                        </address>
+                        <div class="mobile-menu">
+                            <button class="menu" type="button">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <p class="slogan">Первый фирменный online-магазин
+                        Лидской мебельной фабрики</p>
+                    <div class="header_right">
+                        <div class="search">
+                            <form action="#">
+                                <div>
+                                    <input type="text" value="Поиск" />
+                                    <input type="submit" value="" />
+                                </div>
+                            </form>
+                        </div>
+                        <!-- При разрешении 480px обрезается строка  ", на <strong>225 000</strong> рублей" 
+                        по верстке делаю кнопке ширину 50% и внутри все центрирую-->
+                        <a href="#" class="cart_info btn">
+                            <span><span class="count">2</span>товара, на <strong>225 000</strong> рублей</span>
+                        </a>
+                    </div>
+                </div>
+            </header><!--id="header"-->
+            <div id="container" class="inner">
+                <div class="center">
+                    <div id="left_col">
+                        <div class="left_nav">
+                            <div class="accordion">
+                                <div class="left_nav_block no-accord">
+                                    <span class="h2">Каталог категорий<i class="arrow"></i></span>
+                                    <ul>
+                                        <li>
+                                            <a href="/stolovaya-i-gostinaya/"><span>Столовая и гостиная<!--&nbsp;<span>(162)</span>--></span></a>
+                                            <ul style="display: none;">
+                                                <li>
+                                                    <a href="/stolovaya-i-gostinaya/bufety-vitriny-shkafy/">Буфеты, витрины, шкафы<!--&nbsp;<span>(55)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/stolovaya-i-gostinaya/komody-tumby-sunduki/">Комоды, тумбы, сундуки<!--&nbsp;<span>(48)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/stolovaya-i-gostinaya/stoly/">Столы обеденные и журнальные<!--&nbsp;<span>(26)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/stolovaya-i-gostinaya/stulya-taburety-skameyki/">Стулья, табуреты, скамейки<!--&nbsp;<span>(13)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/stolovaya-i-gostinaya/inoe/">Прочее для гостиной и столовой<!--&nbsp;<span>(6)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/stolovaya-i-gostinaya/varianty-stolovykh/">Наборы мебели<!--&nbsp;<span>(14)</span>--></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/spalnya/"><span>Спальня<!--&nbsp;<span>(144)</span>--></span></a>
+                                            <ul>
+                                                <li>
+                                                    <a href="/spalnya/krovati/">Кровати<!--&nbsp;<span>(41)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/spalnya/komody/">Комоды для спальни<!--&nbsp;<span>(18)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/spalnya/tumby-prikrovatnye/">Прикроватные тумбы<!--&nbsp;<span>(17)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/spalnya/shkafy-iz-massiva/">Шкафы для спальни<!--&nbsp;<span>(28)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/spalnya/zerkala/">Зеркала<!--&nbsp;<span>(15)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/spalnya/stoly-tualetnye-i-banketki/">Столы туалетные и банкетки<!--&nbsp;<span>(10)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/spalnya/gotovye-varianty/">Наборы мебели<!--&nbsp;<span>(15)</span>--></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/mebel-dlya-detskoj/"><span>Мебель для детской<!--&nbsp;<span>(21)</span>--></span></a>
+                                            <ul>
+                                                <li>
+                                                    <a href="/mebel-dlya-detskoj/gotovie-varianty/">Комплекты мебели<!--&nbsp;<span>(2)</span>--></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/kabinet-i-biblioteka/"><span>Кабинет и библиотека<!--&nbsp;<span>(39)</span>--></span></a>
+                                            <ul>
+                                                <li>
+                                                    <a href="/kabinet-i-biblioteka/stoly-pismennye/">Столы письменные<!--&nbsp;<span>(11)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/kabinet-i-biblioteka/stulya/">Стулья<!--&nbsp;<span>(2)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/kabinet-i-biblioteka/shkafy-vitriny-dlya-knig/">Шкафы, витрины для книг<!--&nbsp;<span>(19)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/kabinet-i-biblioteka/komody-dlya-kabineta/">Комоды для кабинета<!--&nbsp;<span>(2)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/kabinet-i-biblioteka/byuro-sekretery/">Бюро, секретеры<!--&nbsp;<span>(2)</span>--></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/kabinet-i-biblioteka/varianty-kabinetov/">Наборы мебели<!--&nbsp;<span>(3)</span>--></a>
+                                                </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/prikhozhaya/"><span>Прихожая<!--&nbsp;<span>(55)</span>--></span></a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="/prikhozhaya/shkafy/">Шкафы для прихожей<!--&nbsp;<span>(20)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/prikhozhaya/tumby-i-komody/">Тумбы и комоды для прихожей<!--&nbsp;<span>(12)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/prikhozhaya/veshalki-dlya-odezhdy/">Вешалки для одежды<!--&nbsp;<span>(2)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/prikhozhaya/zerkala-pr/">Зеркала для прихожей<!--&nbsp;<span>(16)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/prikhozhaya/prochee-pr/">Прочее для прихожей<!--&nbsp;<span>(1)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/prikhozhaya/varianty-gotovie/">Комплекты мебели<!--&nbsp;<span>(4)</span>--></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/kukhnya/"><span>Кухня<!--&nbsp;<span>(72)</span>--></span></a>
+                                                <ul style="display: none;">
+                                                    <li>
+                                                        <a href="/kukhnya/shkaf-stol/">Шкаф-стол<!--&nbsp;<span>(30)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/kukhnya/shkaf-nastennyy/">Шкаф настенный<!--&nbsp;<span>(34)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/kukhnya/prochee/">Прочее для кухни<!--&nbsp;<span>(6)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/kukhnya/varianty-kukhni/">Комплекты мебели<!--&nbsp;<span>(2)</span>--></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/myagkaya-mebel/"><span>Мягкая мебель<!--&nbsp;<span>(28)</span>--></span></a>
+                                                <ul style="display: none;">
+                                                    <li>
+                                                        <a href="/myagkaya-mebel/divany-pryamye/">Диваны прямые<!--&nbsp;<span>(12)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/myagkaya-mebel/divany-uglovye/">Диваны угловые<!--&nbsp;<span>(4)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/myagkaya-mebel/kresla-i-banketki/">Кресла и банкетки<!--&nbsp;<span>(8)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/myagkaya-mebel/varianty/">Готовые варианты<!--&nbsp;<span>(4)</span>--></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/matrasy-i-osnovaniya/"><span>Матрасы и основания<!--&nbsp;<span>(42)</span>--></span></a>
+                                                <ul style="display: none;">
+                                                    <li>
+                                                        <a href="/matrasy-i-osnovaniya/matrasy-s-pruzhinnym-blokom/">Матрасы с пружинным блоком<!--&nbsp;<span>(32)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/matrasy-i-osnovaniya/matrasy-s-bespruzhinnym-blokom/">Матрасы с беспружинным блоком<!--&nbsp;<span>(8)</span>--></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/matrasy-i-osnovaniya/osnovaniya-pod-matras/">Основания под матрас<!--&nbsp;<span>(2)</span>--></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/sale/">Распродажа<!----></a>
+                                            </li>
+                                        </ul>
+                                </div>
+                                <div class="left_nav_block">
+                                    <span class="h2">Каталог коллекций<i class="arrow"></i></span>
+                                    <ul style="">
+                                        <li>
+                                            <a href="/collection/viking/">Викинг<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/viking-brashirovanie/">Викинг браширование<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/gloriya/">Глория<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/dominika/">Доминика<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/lotos/">Лотос<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/mekhiko/">Мехико<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/paola/">Паола<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/provintsiya/">Провинция<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/fierta/">Фиерта<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/elburg/">Элбург<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/tsezar/">Цезарь<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/belle-fleur/">Belle Fleur<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/collection/monblan/">Монблан<!----></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="left_nav_block active">
+                                    <span class="h2">Производители<i class="arrow"></i></span>
+                                    <ul style="display: block;">
+                                        <li>
+                                            <a href="/proizvoditely/bobruyskmebel/">Бобруйскмебель<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/proizvoditely/lidskaya-mebelnaya-fabrika/">Лидская мебельная фабрика<!----></a>
+                                        </li>
+                                        <li>
+                                            <a href="/proizvoditely/fandok/">ФанДОК<!----></a>
+                                        </li>
+                                    </ul>
+                                </div>              
+                            </div>
+                        </div>
+                        <div class="sidebar_slider">
+                            <ul class="bxslider">
+                                <li>
+                                    <img src="./images/big_img.png"  alt=""  />
+                                    <div class="slide_text">
+                                        <span>АКЦИЯ</span>
+                                        <h3><a href="#">Мягкий угол СИМОН</a></h3>
+                                        <span class="line"></span>
+                                        <p class="price">99 900 р</p>
+                                    </div>
+                                </li>
+                                <li><img src="./images/sm_img2.png"  alt=""  />
+                                    <div class="slide_text">
+                                        <span>АКЦИЯ</span>
+                                        <h3><a href="#">Мягкий угол</a></h3>
+                                        <span class="line"></span>
+                                        <p class="price">990 900 р</p>
+                                    </div>
+                                </li>
+                                <li><img src="./images/sm_img3.png"  alt=""  />
+                                    <div class="slide_text">
+                                        <span>АКЦИЯ</span>
+                                        <h3><a href="#">Мягкий угол СИМ</a></h3>
+                                        <span class="line"></span>
+                                        <p class="price">99 9 р</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div id="bx-pager">
+                                <a data-slide-index="0" href=""><img src="./images/sm_img1.png"  alt="" /></a>
+                                <a data-slide-index="1" href=""><img src="./images/sm_img2.png"  alt="" /></a>
+                                <a data-slide-index="2" href=""><img src="./images/sm_img3.png"  alt=""  /></a>
+                            </div>
+                        </div>
+                        <div class="social_tabs">
+                            <div id="tabs">
+                                <ul>
+                                    <li><a href="#tabs-1"><span class="soc1"></span></a></li>
+                                    <li><a href="#tabs-2"><span class="soc2"></span></a></li>
+                                    <li><a href="#tabs-3"><span class="soc3"></span></a></li>
+                                </ul>
+                                <div id="tabs-1">
+                                    <div class="soc_block">
+                                        <a href="#"><img src="./images/vk.jpg"  alt="" /></a>
+                                    </div>
+                                </div>
+                                <div id="tabs-2">
+                                    <div class="soc_block"></div>
+                                </div>
+                                <div id="tabs-3">
+                                    <div class="soc_block">
+                                        <a href="#"><img src="./images/vk.jpg"  alt="" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="#">Главная</a></li>
+                                <li>корзина</li>
+                            </ul>
+                        </div>
+                        <h1>корзина</h1>
+                        <div class="basket">
+                            <h3>К сожалению, ваша корзина пока пуста.</h3>
+                            <a href="#" class="back_link">Вернуться на главную</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--id="container"-->
+            <div id="popup-wrapper">
+                <div class="popup-tip by-css">
+                </div>
+                <div class="popup-content">
+                    <div class="inner_popup_slider">
+                        <div class="viewed_slider">
+                            <div class="slide">
+                                <a href="#"></a>
+                                <div class="slide_image">
+                                    <div class="propose_info">
+                                        <ul>
+                                            <li><strong>Размер:</strong> 250 x 250 x 250</li>
+                                            <li><strong>Цвет:</strong> Красное дерево</li>
+                                            <li><strong>Материал:</strong> дуб / ясень</li>
+                                        </ul>
+                                    </div>
+                                    <img src="./images/p_slide4.jpg" />
+                                </div>
+                                <div class="description">
+                                    <h4>Шкаф мехико</h4>
+                                    <a href="#" class="details">Подробнее</a>
+                                    <p class="price">253 500 р</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <a href="#"></a>
+                                <div class="slide_image">
+                                    <div class="propose_info">
+                                        <ul>
+                                            <li><strong>Размер:</strong> 250 x 250 x 250</li>
+                                            <li><strong>Цвет:</strong> Красное дерево</li>
+                                            <li><strong>Материал:</strong> дуб / ясень</li>
+                                        </ul>
+                                    </div>
+                                    <img src="./images/p_slide3.jpg" />
+                                </div>
+                                <div class="description">
+                                    <h4>Кровать Алехандро</h4>
+                                    <a href="#" class="details">Подробнее</a>
+                                    <p class="price">253 500 р</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <a href="#"></a>
+                                <div class="slide_image">
+                                    <div class="propose_info">
+                                        <ul>
+                                            <li><strong>Размер:</strong> 250 x 250 x 250</li>
+                                            <li><strong>Цвет:</strong> Красное дерево</li>
+                                            <li><strong>Материал:</strong> дуб / ясень</li>
+                                        </ul>
+                                    </div>
+                                    <img src="./images/p_slide2.jpg" />
+                                </div>
+                                <div class="description">
+                                    <h4>шкаф пятрусь</h4>
+                                    <a href="#" class="details">Подробнее</a>
+                                    <p class="price">253 500 р</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <a href="#"></a>
+                                <div class="slide_image">
+                                    <div class="propose_info">
+                                        <ul>
+                                            <li><strong>Размер:</strong> 250 x 250 x 250</li>
+                                            <li><strong>Цвет:</strong> Красное дерево</li>
+                                            <li><strong>Материал:</strong> дуб / ясень</li>
+                                        </ul>
+                                    </div>
+                                    <img src="./images/p_slide1.jpg" />
+                                </div>
+                                <div class="description">
+                                    <h4>Комод Аркадий</h4>
+                                    <a href="#" class="details">Подробнее</a>
+                                    <p class="price">253 500 р</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <a href="#"></a>
+                                <div class="slide_image">
+                                    <div class="propose_info">
+                                        <ul>
+                                            <li><strong>Размер:</strong> 250 x 250 x 250</li>
+                                            <li><strong>Цвет:</strong> Красное дерево</li>
+                                            <li><strong>Материал:</strong> дуб / ясень</li>
+                                        </ul>
+                                    </div>
+                                    <img src="./images/p_slide4.jpg" />
+                                </div>
+                                <div class="description">
+                                    <h4>Шкаф мехико</h4>
+                                    <a href="#" class="details">Подробнее</a>
+                                    <p class="price">253 500 р</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <a href="#"></a>
+                                <div class="slide_image">
+                                    <div class="propose_info">
+                                        <ul>
+                                            <li><strong>Размер:</strong> 250 x 250 x 250</li>
+                                            <li><strong>Цвет:</strong> Красное дерево</li>
+                                            <li><strong>Материал:</strong> дуб / ясень</li>
+                                        </ul>
+                                    </div>
+                                    <img src="./images/p_slide3.jpg" />
+                                </div>
+                                <div class="description">
+                                    <h4>Кровать Алехандро</h4>
+                                    <a href="#" class="details">Подробнее</a>
+                                    <p class="price">253 500 р</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerHeight"></div>
+        </div><!--id="wrap"--> 
+        <footer id="footer">
+            <div class="center">
+                <!-- <a href="#" class="msg_link"></a> -->
+                <p class="copyright">© 2013, Lidamebel.com</p>
+                <div class="footer_right">
+                    <ul class="footer_nav">
+                        <li><a href="#" class="active">Главная</a></li>
+                        <li><a href="#">О Компании</a></li>
+                        <li><a href="#">Сборка и доставка</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <p class="creators"><a href="#"><span>Разработка сайта:</span><span>Flex Media</span></a></p>
+                </div>
+                <div class="separator"></div>
+                <div class="footer__category">
+                    <div class="category_nav">
+                        <h3>Категории</h3>
+                        <ul>
+                            <li><a href="#">Спальня</a></li>
+                            <li><a href="#">Кабинет</a></li>
+                            <li><a href="#">Гостинная</a></li>
+                            <li><a href="#">Прихожая</a></li>
+                            <li><a href="#">Столовая</a></li>
+                            <li><a href="#">Мягкая мебель</a></li>
+                            <li><a href="#">Кухня</a></li>
+                        </ul>
+                    </div>
+                    <div class="collections">
+                        <h3>Коллекции</h3>
+                        <ul>
+                            <li><a href="#">Провинция</a></li>
+                            <li><a href="#">Лагус</a></li>
+                            <li><a href="#">Глория</a></li>
+                            <li><a href="#">Мехико</a></li>
+                            <li><a href="#">Элбург</a></li>
+                            <li><a href="#">Флоренция</a></li>
+                            <li><a href="#">Лотос</a></li>
+                        </ul>
+                    </div>
+                    <div class="manufacturers">
+                        <span class="h3">Фабрики</span>
+                        <ul>
+                            <li>
+                                <a href="/proizvoditely/bobruyskmebel/">Бобруйскмебель<!----></a>
+                            </li>
+                            <li>
+                                <a href="/proizvoditely/lidskaya-mebelnaya-fabrika/">Лидская мебельная фабрика<!----></a>
+                            </li>
+                            <li>
+                                <a href="/proizvoditely/fandok/">ФанДОК<!----></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_order">
+                        <h3>Заказать</h3>
+                        <p>+7 (917) 551-7-440</p>
+                        <p>+7 (495) 495-20-60</p>
+                        <a href="#">zakaz@lidamebel.com</a>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <a href="#" class="footer_logo"><img src="./images/logo_f.png"  alt="" /></a>
+                    <div class="payments">
+                        <div class="pays_title">Принимаем к оплате:</div>                        
+                        <img src="images/visa.jpg" alt="">
+                        <img src="images/master.png" alt="">
+                        <img src="images/maestro.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer><!--id="footer"-->
+        <div class="popups call_form" id="back_call_popup">
+            <div class="popups__inner">
+                <h3>Обратный звонок</h3>
+                <p>Пожалуйста, заполните краткую контактную информацию. Наши сотрудники свяжутся с вами в рабочее время.</p>
+                <div class="form">
+                    <form action="" class="js-validate">
+                        <div>
+                            <div class="field">
+                                <div class="field__title">Ваше имя</div>
+                                <div class="field__body">
+                                    <input type="text" class="holder" data-validation="required">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="field__title">Телефон</div>
+                                <div class="field__body">
+                                    <input type="text" class="holder" data-validation-regexp="^[-0-9()+ ]+$" data-validation="custom">
+                                </div>
+                            </div>
+                            <button type="submit"><span>Добавить отзыв</span></button>
+                        </div>
+                    </form>
+                </div>
+                <a class="close" href="#"></a>
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </body>
+</html>
+
+

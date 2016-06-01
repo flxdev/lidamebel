@@ -1,0 +1,55 @@
+.order_registration p {
+    max-width: 270px;
+}
+.price_item {
+    background: rgba(155, 152, 151, 0.1);
+    padding: 25px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 270px;
+    text-align: center;
+}
+.price_value {
+    margin-bottom: 25px;
+}
+.price_item .title_section {
+    text-align: center;
+    padding-bottom: 18px;
+    position: relative;
+    margin-bottom: 12px;
+}
+.price_item .title_section:after {
+    content: "";
+    height: 3px;
+    width: 12px;
+    background: #3e3331;
+    position: absolute;
+    left: 50%;
+    margin-left: -6px;
+    bottom: 0;
+}
+.price_value span {
+    font-family: "pf_din_text_comp_promedium", Arial, sans-serif;
+    font-size: 28px;
+    color: #3f3231;
+}
+.price_item p {
+     font-family: "pf_din_text_comp_promedium", Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 0;
+    display: inline;
+}
+.form {
+    width: 270px;
+}
+.form form {
+    padding-bottom: 0;
+}
+.error_order {
+    max-width: 270px;
+    color: #dd3805;
+    font-family: 'pf_din_text_comp_prolight', Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
