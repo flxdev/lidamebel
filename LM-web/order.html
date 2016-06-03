@@ -43,6 +43,7 @@
                                 <li><a href="#" class="active">Главная</a></li>
                                 <li><a href="#">О компании</a></li>
                                 <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Дизайн</a></li>
                                 <li><a href="#">Контакты</a></li>
                             </ul>
                             <ul class="second_nav">
@@ -344,28 +345,6 @@
                                 <a data-slide-index="2" href=""><img src="./images/sm_img3.png"  alt=""  /></a>
                             </div>
                         </div>
-                        <div class="social_tabs">
-                            <div id="tabs">
-                                <ul>
-                                    <li><a href="#tabs-1"><span class="soc1"></span></a></li>
-                                    <li><a href="#tabs-2"><span class="soc2"></span></a></li>
-                                    <li><a href="#tabs-3"><span class="soc3"></span></a></li>
-                                </ul>
-                                <div id="tabs-1">
-                                    <div class="soc_block">
-                                        <a href="#"><img src="./images/vk.jpg"  alt="" /></a>
-                                    </div>
-                                </div>
-                                <div id="tabs-2">
-                                    <div class="soc_block"></div>
-                                </div>
-                                <div id="tabs-3">
-                                    <div class="soc_block">
-                                        <a href="#"><img src="./images/vk.jpg"  alt="" /></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div id="content">
                         <div class="breadcrumbs">
@@ -383,13 +362,37 @@
                                 <div>
                                     <div class="col50">
                                         <div class="title_section">Представьтесь</div>
-                                        <input type="text" value="Ваше имя" />
-                                        <input type="text" value="Ваша фамилия" />
-                                        <input type="text" value="E-mail" />
-                                        <input type="text" value="Телефон" />
+                                        <div class="field">
+                                            <div class="field__title">ФИО<sup>*</sup></div>
+                                            <div class="field__body">
+                                                <input type="text" class="holder" data-validation="required">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="field__title">E-mail<sup>*</sup></div>
+                                            <div class="field__body">
+                                                <input type="text" class="holder" data-validation="email">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="field__title">Телефон<sup>*</sup></div>
+                                            <div class="field__body">
+                                                <input type="text" class="holder" data-validation="required">
+                                            </div>
+                                        </div>
                                         <div class="title_section">Дополнительно</div>
-                                        <input type="text" value="Желаемый срок исполнения: 02.12.2013" />
-                                        <textarea cols="3" rows="3"></textarea>
+                                        <div class="field">
+                                            <div class="field__title">Желаемый срок исполнения: 02.12.2013</div>
+                                            <div class="field__body">
+                                                <input type="text" class="holder" data-validation="required">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="field__title">Оставьте комментарий по поводу заноса и сборки мебели</div>
+                                            <div class="field__body">
+                                                <textarea cols="3" rows="3"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col50">
                                         <div class="row_item">

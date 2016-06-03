@@ -43,6 +43,7 @@
                                 <li><a href="#" class="active">Главная</a></li>
                                 <li><a href="#">О компании</a></li>
                                 <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Дизайн</a></li>
                                 <li><a href="#">Контакты</a></li>
                             </ul>
                             <ul class="second_nav">
@@ -367,20 +368,22 @@
                                         <a href="javascript:void(0);" onclick="OpenWin('cart_popup')" class="btn cart_btn"><span><img src="./images/cart_icon.png"  alt="" />&nbsp;&nbsp;В корзину</span></a>
                                     </div>
                                 </div>
-                                <div class="payment">
-                                    <h3>Принимаем к оплате</h3>
-                                    <img alt="" src="images/visa.jpg">
-                                    <img alt="" src="images/master.png">
-                                    <img alt="" src="images/maestro.png">
-                                    <img alt="" src="images/webmoney.jpg">
-                                    <img alt="" src="images/yandex.jpg">
-                                    <img alt="" src="images/sberbank.jpg">
-                                </div>
-                                <div class="markt">
-                                    <div>
-                                        <a href="">Мы на яндекс.маркет</a>
-                                        <div class="rate">
-                                            <i class="active" style="width: 80%;"></i>
+                                <div class="overlay">
+                                    <div class="payment">
+                                        <h3>Принимаем к оплате</h3>
+                                        <img alt="" src="images/visa.jpg">
+                                        <img alt="" src="images/master.png">
+                                        <img alt="" src="images/maestro.png">
+                                        <img alt="" src="images/webmoney.jpg">
+                                        <img alt="" src="images/yandex.jpg">
+                                        <img alt="" src="images/sberbank.jpg">
+                                    </div>
+                                    <div class="markt">
+                                        <div>
+                                            <a href="">Мы на яндекс.маркет</a>
+                                            <div class="rate">
+                                                <i class="active" style="width: 80%;"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -480,8 +483,14 @@
                                         </ul>
                                     </div>
                                     <div class="js-tab-cont js-tab1">
+                                        <div class="product_right">
+                                            <div class="descript">
+                                                <h3>описание</h3>
+                                                <p>Любители вина в нашем магазине могут приобрести бочку-бар для хранения напитков. Все Ваши гости оценят по достоинству прекрасную подачу напитков к столу. Бочка прекрасно подойдет для интерьеров ресторанов. Бочка оборудована ячейками для бутылок с обеих сторон.</p>
+                                            </div>
+                                        </div>
                                         <div class="product_left">
-                                            <table class="table__tabs">
+                                            <table class="table__tabs ">
                                                 <thead>
                                                     <tr>
                                                         <th>Параметры</th>
@@ -540,50 +549,8 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <div class="product_right">
-                                            <div class="descript">
-                                                <h3>описание</h3>
-                                                <p>Любители вина в нашем магазине могут приобрести бочку-бар для хранения напитков. Все Ваши гости оценят по достоинству прекрасную подачу напитков к столу. Бочка прекрасно подойдет для интерьеров ресторанов. Бочка оборудована ячейками для бутылок с обеих сторон.</p>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="js-tab-cont js-tab2">
-                                        <div class="product_left">
-                                            <div class="reviews">
-                                                <div class="item__review">
-                                                    <h3>Спасибо за работу!</h3>
-                                                    <ul class="rating">
-                                                        <li class="active"><a></a></li>
-                                                        <li class="active"><a></a></li>
-                                                        <li class="active"><a></a></li>
-                                                        <li class="active"><a></a></li>
-                                                        <li><a></a></li>
-                                                    </ul>
-                                                    <div class="text">
-                                                        <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отношение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                                    </div>
-                                                    <div class="author">
-                                                        Алексей Петрович, 13 ноября 2013
-                                                    </div>
-                                                </div>
-                                                <div class="item__review">
-                                                    <h3>Отличный бар, который идеально Дополнит кантри-интерьер!</h3>
-                                                    <ul class="rating">
-                                                        <li class="active"><a></a></li>
-                                                        <li class="active"><a></a></li>
-                                                        <li class="active"><a></a></li>
-                                                        <li class="active"><a></a></li>
-                                                        <li><a></a></li>
-                                                    </ul>
-                                                    <div class="text">
-                                                        <p>Шикарный внешне и функционально удобный, я нашла отличный бар в этом интернет-магазине по приемлемой цене. Отдельное спасибо за вежливое отношение и профессиональную консультацию специалистам этой компании. </p>
-                                                    </div>
-                                                    <div class="author">
-                                                        Алиса Селезнева, 15 сентября 2015
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="product_right">
                                             <div class="descript acenter">
                                                 <h3>Средняя оценка товара</h3>
@@ -678,6 +645,181 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="product_left">
+                                            <div class="reviews_block">
+                                                <div class="review_item">
+                                                    <div class="review">
+                                                        <div class="review__head">
+                                                            <h3>Алексей</h3>
+                                                            <data>24 Февраля 2016</data>
+                                                        </div>
+                                                        <div class="review__content">
+                                                            <div class="review__like">
+                                                                <div class="review__like-text">Отзыв полезен?</div>
+                                                                <div class="review__like-action">
+                                                                    <div class="pos">20</div>
+                                                                    <div class="neg">3</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="overlay">
+                                                                <div class="review__title">Рекомендую!</div>
+                                                                <p>Уже второй раз заказываю мебель в ЮНИПРОМ с доставкой в Калугу. Мебель просто отличная, добротная (брал из массива березы). Прекрасно работают менеджеры, консультанты (Отдельное спасибо Алексею и Ксении). Привезли быстро, сделали выгодное предложение по доставке и скидку, так как заказы были достаточно большими. Во второй раз накосячил производитель с задней стенкой шкафа, но отдать должное ребятам, прислали задник за свой счет в течении 2 дней после обращения к ним с претензиями. Вообщем всем рекомендую этот магазин, приятно было с ними посотрудничать, думаю не в последний раз. Спасибо всей команде ЮНИПРОМ, пора расширять список производителей!!!</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="rating__area">
+                                                            <div class="rating__item">
+                                                                <span>Сервис</span>
+                                                                <ul class="rating js-rating active">
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="rating__item">
+                                                                <span>Доставка</span>
+                                                                <ul class="rating js-rating active">
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="rating__item">
+                                                                <span>Качество</span>
+                                                                <ul class="rating js-rating active">
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                    <li class="active"><a href=""></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="review_carousel">
+                                                            <a href="images/slide1.jpg" class="review_carousel-item" rel="review-1">
+                                                                <img src="images/slide1.jpg" alt="">
+                                                            </a>
+                                                            <a href="images/slide1.jpg" class="review_carousel-item" rel="review-1">
+                                                                <img src="images/slide1.jpg" alt="">
+                                                            </a>
+                                                            <a href="images/slide1.jpg" class="review_carousel-item" rel="review-1">
+                                                                <img src="images/slide1.jpg" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="review_item">
+                                                    <div class="review">
+                                                        <div class="review__head">
+                                                            <h3>Евгения</h3>
+                                                            <data>12 Февраля 2016</data>
+                                                        </div>
+                                                        <div class="review__content">
+                                                            <div class="review__like">
+                                                                <div class="review__like-text">Отзыв полезен?</div>
+                                                                <div class="review__like-action">
+                                                                    <div class="pos">19</div>
+                                                                    <div class="neg">0</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="overlay">
+                                                                <div class="review__title">Не рекомендую!</div>
+                                                                <p>Заказывала тумбу с доставкой в Н.Новгород. Спасибо огромное! Ребята сработали очень быстро. В субботу проплатила, а в четверг тумба уже доставлена в Н.Новгород. сегодня еду забирать. По качеству отпишусь</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="rating__area">
+                                                            <div class="rating__item">
+                                                                <span>Сервис</span>
+                                                                <ul class="rating">
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="rating__item">
+                                                                <span>Доставка</span>
+                                                                <ul class="rating">
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="rating__item">
+                                                                <span>Качество</span>
+                                                                <ul class="rating">
+                                                                    <li class="active"><a></a></li>
+                                                                    <li><a></a></li>
+                                                                    <li><a></a></li>
+                                                                    <li><a></a></li>
+                                                                    <li><a></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="review_item">
+                                                    <div class="review">
+                                                        <div class="review__head">
+                                                            <h3>Наталия</h3>
+                                                            <data>9 Октября 2015</data>
+                                                        </div>
+                                                        <div class="review__content">
+                                                            <div class="review__like">
+                                                                <div class="review__like-text">Отзыв полезен?</div>
+                                                                <div class="review__like-action">
+                                                                    <div class="pos">19</div>
+                                                                    <div class="neg">1</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="overlay">
+                                                                <div class="review__title">Рекомендую!</div>
+                                                                <p>Мы купили спальню, прихожую и книжный шкаф Паола. Изначально заинтересовали цены и было интуитивное ожидание хорошего качества мебели. Ожидания оправдались полностью. Оптимальный баланс цены и качества, при этом мебель выглядит дороже своей стоимости. Хотя белорусские производители и грешат точностью геометрии, но в целом все смотрится респектабельно и благородно. Но! Самое большое впечатление от компании Юнипром создалось от очень ясной и честной коммуникации с менеджерами  - Александром и Алексеем. Вся их работа была буквально пронизана заботой о клиенте. В одном из отзывов прочитала, что они делают больше, чем ожидаешь, и это правда! Начиная от персональной  скидки за объем заказа, рекордные сроки поставки, и заканчивая заказом (по моей просьбе!) образца стула, т.к. мы хотим еще заказать столовую группу. У меня очень придирчивый к качеству обслуживания супруг, но ребята "купили" его полную лояльность! )) Создается впечатление очень грамотно выстроенной и поддерживаемой корпоративной культуры. Поистине, ребята работают с людьми и для людей, а не с объектами для зарабатывания денег. Спасибо! Удачи в бизнесе, лояльных клиентов, и очень надеюсь, что такая отличная менеджерская работа приведет к стремительному росту компании и значительному увеличению оборотов. Искренне рекомендую эту компанию для сотрудничества. Всех благ!</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="rating__area">
+                                                            <div class="rating__item">
+                                                                <span>Сервис</span>
+                                                                <ul class="rating">
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="rating__item">
+                                                                <span>Доставка</span>
+                                                                <ul class="rating">
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="rating__item">
+                                                                <span>Качество</span>
+                                                                <ul class="rating">
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                    <li class="active"><a></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="javascript:void(0);" onclick="OpenWin('add_testimonial')" class="btn leave_review"><span>Добавить отзыв</span></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -685,16 +827,26 @@
                         <h3>Товары в комплекте</h3>
                         <div class="products_small_block">
                             <div class="catalog_item">
-                                <a href="#"></a>
+                                <a href="/stolovaya-i-gostinaya/bufety-vitriny-shkafy/bufet-viking-01-brash/"></a>
                                 <div class="slide_image">
+                                    <div class="propose_info">
+                                        <ul>
+                                            <li><strong>Размер: </strong>1230x490x1966</li>
+                                            <li><strong>Цвет: </strong>белый с темной патиной.</li>
+                                            <li><strong>Материал: </strong>массив сосны</li>
+                                        </ul>
+                                    </div>
                                     <span class="frame"></span>
-                                    <img src="./images/prod1.png" />
+                                    <img src="/upload/resize_cache/iblock/9b9/130_130_2/9b9317d361b709f8c6d8fcddc8a3f3c0.jpg">
                                 </div>
                                 <div class="description">
-                                    <h4>Шкаф мехико</h4>
-                                    <a href="#" class="details">Подробнее</a>
-                                    <p class="price">253 500 р</p>
+                                    <h4>Буфет "Викинг 01" браш</h4>
+                                    <a class="details" href="/stolovaya-i-gostinaya/bufety-vitriny-shkafy/bufet-viking-01-brash/">Подробнее</a>
+                                    <p class="price">38 400 р</p>
                                 </div>
+                            <div class="badge_links">
+                                                <a href="#" class="badge4"></a>
+                                    </div>
                             </div>
                             <div class="catalog_item">
                                 <a href="#"></a>
@@ -782,161 +934,6 @@
                                     <a href="#" class="details">Подробнее</a>
                                     <p class="price">253 500 р</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="reviews_row">
-                            <div class="review_form">
-                                <h3>оставить отзыв</h3>
-                                <ul class="rating js-rating">
-                                    <li class="active"><a href="#"></a></li>
-                                    <li class="active"><a href="#"></a></li>
-                                    <li class="active"><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-                                </ul>
-                                <form action="#">
-                                    <div>
-                                        <input type="text" value="Ваше имя" />
-                                        <input type="text" value="E-mail" />
-                                        <textarea cols="3" rows="4"></textarea>
-                                        <button type="submit"><span>Добавить отзыв</span></button>
-                                    </div>
-                                </form>
-                            </div>
-                            
-                            <div class="review_wrapper">
-                            <h3>Отзывы о товаре</h3>
-                            
-                            <div class="reviews">
-                                <div class="review">
-                                    <h4>Спасибо за работу!</h4>
-                                    <ul class="rating">
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                    <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отно-
-                                        шение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                    <span class="review_separator"></span>
-                                    <p class="author">Алесей Петрович, 13 ноября 2013</p>
-                                </div>
-                                <div class="review">
-                                    <h4>Спасибо за работу!</h4>
-                                    <ul class="rating">
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                    <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отно-
-                                        шение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                    <span class="review_separator"></span>
-                                    <p class="author">Алесей Петрович, 13 ноября 2013</p>
-                                </div>
-                                <div class="review">
-                                    <h4>Спасибо за работу!</h4>
-                                    <ul class="rating">
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                    <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отно-
-                                        шение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                    <span class="review_separator"></span>
-                                    <p class="author">Алесей Петрович, 13 ноября 2013</p>
-                                </div>
-                                <div class="review">
-                                    <h4>Спасибо за работу!</h4>
-                                    <ul class="rating">
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                    <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отно-
-                                        шение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                    <span class="review_separator"></span>
-                                    <p class="author">Алесей Петрович, 13 ноября 2013</p>
-                                </div>
-                                <div class="review">
-                                    <h4>Спасибо за работу!</h4>
-                                    <ul class="rating">
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                    <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отно-
-                                        шение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                    <span class="review_separator"></span>
-                                    <p class="author">Алесей Петрович, 13 ноября 2013</p>
-                                </div>
-                                <div class="review">
-                                    <h4>Спасибо за работу!</h4>
-                                    <ul class="rating">
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                    <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отно-
-                                        шение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                    <span class="review_separator"></span>
-                                    <p class="author">Алесей Петрович, 13 ноября 2013</p>
-                                </div>
-                                <div class="review">
-                                    <h4>Спасибо за работу!</h4>
-                                    <ul class="rating">
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                    <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отно-
-                                        шение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                    <span class="review_separator"></span>
-                                    <p class="author">Алесей Петрович, 13 ноября 2013</p>
-                                </div>
-                                <div class="review">
-                                    <h4>Спасибо за работу!</h4>
-                                    <ul class="rating">
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                    <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отно-
-                                        шение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                    <span class="review_separator"></span>
-                                    <p class="author">Алесей Петрович, 13 ноября 2013</p>
-                                </div>
-                                <div class="review">
-                                    <h4>Спасибо за работу!</h4>
-                                    <ul class="rating">
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li class="active"><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                    <p>Хочу выразить благодарность вашему магазину за качественую мебельи хорошее отно-
-                                        шение к своим клиентам. Желаю удачи и процветания! Спасибо)</p>
-                                    <span class="review_separator"></span>
-                                    <p class="author">Алесей Петрович, 13 ноября 2013</p>
-                                </div>
-                            </div>
-
-                            <a href="#" class="btn view_all"><span>Показать все</span></a>
                             </div>
                         </div>
                     </div>
@@ -1066,34 +1063,34 @@
         </div><!--id="wrap"--> 
         <footer id="footer">
             <div class="center">
-                <a href="#" class="msg_link"></a>
+                <!-- <a href="#" class="msg_link"></a> -->
                 <p class="copyright">© 2013, Lidamebel.com</p>
                 <div class="footer_right">
                     <ul class="footer_nav">
                         <li><a href="#" class="active">Главная</a></li>
                         <li><a href="#">О Компании</a></li>
                         <li><a href="#">Сборка и доставка</a></li>
-                        <li><a href="#">Каталог</a></li>
                         <li><a href="#">Новости</a></li>
                         <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Статьи</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                     <p class="creators"><a href="#"><span>Разработка сайта:</span><span>Flex Media</span></a></p>
                 </div>
                 <div class="separator"></div>
-                <div class="category_nav">
-                    <h3>Категории</h3>
-                    <ul>
-                        <li><a href="#">Спальня</a></li>
-                        <li><a href="#">Кабинет</a></li>
-                        <li><a href="#">Гостинная</a></li>
-                        <li><a href="#">Прихожая</a></li>
-                        <li><a href="#">Столовая</a></li>
-                        <li><a href="#">Мягкая мебель</a></li>
-                        <li><a href="#">Кухня</a></li>
-                    </ul>
-                </div>
-                <div class="footer_right">
+                <div class="footer__category">
+                    <div class="category_nav">
+                        <h3>Категории</h3>
+                        <ul>
+                            <li><a href="#">Спальня</a></li>
+                            <li><a href="#">Кабинет</a></li>
+                            <li><a href="#">Гостинная</a></li>
+                            <li><a href="#">Прихожая</a></li>
+                            <li><a href="#">Столовая</a></li>
+                            <li><a href="#">Мягкая мебель</a></li>
+                            <li><a href="#">Кухня</a></li>
+                        </ul>
+                    </div>
                     <div class="collections">
                         <h3>Коллекции</h3>
                         <ul>
@@ -1106,13 +1103,35 @@
                             <li><a href="#">Лотос</a></li>
                         </ul>
                     </div>
+                    <div class="manufacturers">
+                        <span class="h3">Фабрики</span>
+                        <ul>
+                            <li>
+                                <a href="/proizvoditely/bobruyskmebel/">Бобруйскмебель<!----></a>
+                            </li>
+                            <li>
+                                <a href="/proizvoditely/lidskaya-mebelnaya-fabrika/">Лидская мебельная фабрика<!----></a>
+                            </li>
+                            <li>
+                                <a href="/proizvoditely/fandok/">ФанДОК<!----></a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="footer_order">
                         <h3>Заказать</h3>
                         <p>+7 (917) 551-7-440</p>
                         <p>+7 (495) 495-20-60</p>
                         <a href="#">zakaz@lidamebel.com</a>
                     </div>
+                </div>
+                <div class="footer_right">
                     <a href="#" class="footer_logo"><img src="./images/logo_f.png"  alt="" /></a>
+                    <div class="payments">
+                        <div class="pays_title">Принимаем к оплате:</div>                        
+                        <img src="images/visa.jpg" alt="">
+                        <img src="images/master.png" alt="">
+                        <img src="images/maestro.png" alt="">
+                    </div>
                 </div>
             </div>
         </footer><!--id="footer"-->

@@ -47,7 +47,6 @@ ul.scroll_tabs_container {
 
 .scroll_tabs_container .scroll_tab_left_button {
   height: 54px;
-  background-color: #CCCCCC;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -55,19 +54,21 @@ ul.scroll_tabs_container {
   -ms-user-select: none;
   user-select: none;
   position: absolute;
-  width: 26px!important;
+  width: 35px!important;
   z-index: 5;
+  background-image: url(../images/blur_2.png);
+  background-position: 100% 50%;
 }
 
-.scroll_tabs_container .scroll_tab_left_button::before {
-  content: "\25C0";
-  line-height: 54px;
-  padding-left: 5px;
-}
+// .scroll_tabs_container .scroll_tab_left_button::before {
+//   content: "\25C0";
+//   line-height: 54px;
+//   padding-left: 5px;
+// }
 
-.scroll_tabs_container .scroll_tab_left_button_over {
-  background-color: #999999;
-}
+// .scroll_tabs_container .scroll_tab_left_button_over {
+//   background-color: #999999;
+// }
 
 .scroll_tabs_container .scroll_tab_left_button_disabled {
   color: #AAAAAA;
@@ -77,7 +78,6 @@ ul.scroll_tabs_container {
 
 .scroll_tabs_container .scroll_tab_right_button {
   height: 54px;
-  background-color: #CCCCCC;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -85,19 +85,22 @@ ul.scroll_tabs_container {
   -ms-user-select: none;
   user-select: none;
   position: absolute;
-  width: 26px!important;
+  width: 35px!important;
   z-index: 5;
+  background-image: url(../images/blur_1.png);
+  background-position: 0 50%;
+
 }
 
-.scroll_tabs_container .scroll_tab_right_button::before {
-  content: "\25B6";
-  line-height: 54px;
-  padding-left: 5px;
-}
+// .scroll_tabs_container .scroll_tab_right_button::before {
+//   content: "\25B6";
+//   line-height: 54px;
+//   padding-left: 5px;
+// }
 
-.scroll_tabs_container .scroll_tab_right_button_over {
-  background-color: #999999;
-}
+// .scroll_tabs_container .scroll_tab_right_button_over {
+//   background-color: #999999;
+// }
 
 .scroll_tabs_container .scroll_tab_right_button_disabled{
   color: #AAAAAA;
