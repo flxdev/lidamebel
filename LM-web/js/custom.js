@@ -670,6 +670,38 @@ $(document).ready(function() {
 			return null;
 		}
 
+		function descr(){
+			$('.r-descr').each(function(){
+				var _ = $(this),
+					item = _.find('li'),
+					status = _.next(),
+					sItem = status.find('span'),
+					timeout;
+
+				if(_.find('li.active').length){
+					var index = _.find('li.active').last().index();
+					sItem.eq(index).addClass('status').siblings().removeClass('status');
+				}
+
+				item.on('mouseenter', function(){
+					clearTimeout(timeout);
+					var index = $(this).index();
+					sItem.eq(index).addClass('status').siblings().removeClass('status');
+				});
+				item.on('mouseleave', function(){
+					timeout = setTimeout(function(){
+						if(_.find('li.active').length){
+							var index = _.find('li.active').last().index();
+							sItem.eq(index).addClass('status').siblings().removeClass('status');
+						} else {
+							sItem.removeClass('status');
+						}
+					},100);					
+					
+				});
+			});
+		} descr();
+
 	});
 
 });

@@ -1148,6 +1148,29 @@ body.space {
     vertical-align: top;
     margin-bottom: 0;
 }
+.review_form dl dd {
+    position: relative;
+}
+.rating-status {
+    color: #c1bdbb;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 11px;
+    font-style: italic;
+    left: 90%;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+}
+.rating-status span {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.rating-status span.status {
+    opacity: 1;
+    visibility: visible;
+}
+
 @media screen and (max-width: 1280px) {
     .catalog_item .propose_info li {
         font-size: 10px !important;
