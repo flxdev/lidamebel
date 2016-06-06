@@ -1170,7 +1170,90 @@ body.space {
     opacity: 1;
     visibility: visible;
 }
-
+.price__area {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+.price__area .price, .price__area .old__price {
+    display: inline-block;
+    vertical-align: bottom;
+}
+.price__area .price {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+}
+.price__area .old__price {
+    font-family: 'pf_din_text_comp_proregular', Arial,sans-serif;
+    text-transform: uppercase;
+    color: #a89f99;
+    font-size: 15px;
+    padding-left: 5px;
+    position: relative;
+}
+.price__area .old__price::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 2px;
+    right: -2px;
+    top: 50%;
+    background-color: #a89f99;
+}
+.description .price {
+    max-width: 100px;
+    width: auto;;
+}
+.product_item .stock {
+    float: none;
+    display: inline-block;
+    text-align: left;
+}
+.product_item .stock .stock_2 {
+    color: #bf9021;
+    background-color: transparent;
+    padding: 0
+}
+.product_item .stock .stock_1::after {
+    display: none;
+}
+.product_item .stock .stock_1 {
+    color: #328f28;
+    background-color: transparent;
+    padding: 0
+}
+.propose_info {
+    z-index: 1;
+}
+.product_item .badge_links, .catalog_item .badge_links, .slide .badge_links {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+.product_item .badge_links, .catalog_item .badge_links, .slide .badge_links {
+    margin-bottom: 0;
+}
+.product_item .badge_links a, .catalog_item .badge_links a, .slide .badge_links a {
+    color: #ffffff;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 2px 0 rgba(150, 150, 150, 0.5);
+    width: 40px;
+}
+.product_item .badge_links .badge1, .catalog_item .badge_links .badge1, .slide .badge_links .badge1 {
+    background: rgba(0, 0, 0, 0) url("../images/badges.png") no-repeat scroll 0 0 / cover ;
+}
+.product_item .badge_links .badge4, .catalog_item .badge_links .badge4, .slide .badge_links .badge4 {
+    background: rgba(0, 0, 0, 0) url("../images/badges.png") no-repeat scroll 0 -137px / cover ;
+}
 @media screen and (max-width: 1280px) {
     .catalog_item .propose_info li {
         font-size: 10px !important;
