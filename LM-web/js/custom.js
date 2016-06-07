@@ -677,15 +677,21 @@ $(document).ready(function() {
 			$('.r-descr').each(function(){
 				var _ = $(this),
 					item = _.find('li'),
+					a = item.find('a'),
 					status = _.next(),
 					sItem = status.find('span'),
+					inputs = _.parent().find('input'),
 					timeout;
 
+				
+
 				if(_.find('li.active').length){
-					var index = _.find('li.active').last().index();
+					var index = +_.find('li.active').last().index();
 					sItem.eq(index).addClass('status').siblings().removeClass('status');
+					inputs.val(index+1);
 				}
 
+				console.log(inputs.val())
 				item.on('mouseenter', function(){
 					clearTimeout(timeout);
 					var index = $(this).index();
@@ -699,8 +705,10 @@ $(document).ready(function() {
 						} else {
 							sItem.removeClass('status');
 						}
-					},100);					
-					
+					},100);
+				});
+				a.on('click', function(){
+					inputs.val($(this).parents('.rating').find('.active').length);
 				});
 			});
 		} descr();
