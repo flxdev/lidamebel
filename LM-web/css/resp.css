@@ -758,6 +758,10 @@ div.slides .caroufredsel_wrapper {
     vertical-align: top;
     cursor: pointer;
 }
+.review__like-action .pos.active {
+    background-image: url(../images/pos-active.png);
+    color: #5aa551;
+}
 .review__like-action .neg {
     width: 50%;
     height: 26px;
@@ -774,6 +778,10 @@ div.slides .caroufredsel_wrapper {
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
+}
+.review__like-action .neg.active {
+    background-image: url(../images/neg-active.png);
+    color: #ff3101;
 }
 .review__content .review__title {
     font-family: Verdana, Arial, sans-serif;
