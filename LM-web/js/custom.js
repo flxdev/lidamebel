@@ -3,28 +3,6 @@ $(function(){
 	initFancyBox();
 });
 $(document).ready(function() {
-
-	//validation
-
-	var form_validate = $('.js-validate');
-	if (form_validate.length) {
-		form_validate.each(function () {
-			var form_this = $(this);
-			$.validate({
-				form : form_this,
-				borderColorOnError : true,
-				scrollToTopOnError : false,
-				validateOnBlur : true,
-				onSuccess: function($form){
-					
-				}
-			});
-		});
-	};
-
-
-
-
 	var gallery = $('.js-gallery'),
 		gallery__pager = $('.gallery__pager');
 
@@ -61,7 +39,7 @@ $(document).ready(function() {
 				content = this_.next('ul');
 
 			if(parent.hasClass('no-accord')) return;
-			
+
 			if(parent.hasClass('active')){
 				parent.removeClass('active');
 				content.stop(true, true).slideToggle();
@@ -110,7 +88,7 @@ $(document).ready(function() {
 		items: 1,
 		responsive: true,
 		mousewheel: false,
-		swipe: { 
+		swipe: {
 			onMouse: true,
 			onTouch: true
 		},
@@ -204,7 +182,7 @@ $(document).ready(function() {
 		});
   	}
   	setTimeout(function(){tab();},100);
-  	
+
 
 	$popupTip = $('.popup-tip.by-css');
 	$popupWrapper = $('#popup-wrapper');
@@ -242,7 +220,7 @@ $(document).ready(function() {
 */
 
     $('#article').jScrollPane();
-	
+
 	$('#about').jScrollPane();
 
 
@@ -268,7 +246,7 @@ $(document).ready(function() {
 		auto: true,
 		captions: true
 	});
-	
+
 	// $('.viewed_slider').bxSlider({
 	// 	auto: false,
 	// 	minSlides: 1,
@@ -330,8 +308,8 @@ $(document).ready(function() {
 			init();
 		});
 	})();
-		
-	
+
+
 	$('.minus').click(function() {
 		var $input = $(this).parent().find('input');
 		var count = parseInt($input.val()) - 1;
@@ -347,7 +325,7 @@ $(document).ready(function() {
 		$input.change();
 		return false;
 	});
-	
+
 	// $('.useful_slider').bxSlider({
 	// 	mode: 'fade',
 	// 	auto: true,
@@ -417,7 +395,7 @@ $(document).ready(function() {
 		minSlides: 2,
 		slideMargin: 12
 	});
-	
+
 	$('.sidebar_slider .bxslider').bxSlider({
 		pagerCustom: '#bx-pager',
 		auto: true,
@@ -425,7 +403,7 @@ $(document).ready(function() {
 		autoHover: true,
 		mode: "fade"
 	});
-	
+
 	$('.propose_slider').bxSlider({
 		slideWidth: 207,
 		auto: true,
@@ -434,13 +412,13 @@ $(document).ready(function() {
 		minSlides: 1,
 		maxSlides: 4
 	});
-	
+
 	$('.popup .close').click(function() {
 		$('#overlay').fadeOut();
 		$(this).parent().fadeOut('slow');
 		return false;
 	});
-	
+
 	$('#cart_popup .popup .close').click(function() {
 		$('#overlay').fadeOut();
 		$(this).parent().fadeOut('slow');
@@ -451,7 +429,7 @@ $(document).ready(function() {
 		$('#overlay').fadeOut();
 		$(this).parent().fadeOut('slow');
 		return false;
-	});			
+	});
 	$('.search input[type=text], .call_form input[type=text], .review_form input[type=text]')
 			.bind('focus', Function("if(this.value==this.defaultValue) this.value=''"))
 			.bind('blur', Function("if(this.value=='') this.value=this.defaultValue"));
@@ -459,8 +437,8 @@ $(document).ready(function() {
 	//// google map
 	if ($('#gmap1, #gmap2').length) {
 		mapInit();
-	} 
-	
+	}
+
 	//// tabs
 	$("#tabs").tabs({
 		select: function(event, ui) {
@@ -469,7 +447,7 @@ $(document).ready(function() {
 			}
 		}
 	});
-	
+
 	//// slider
 	if ($('.js-mainSlider').length) {
 		$('.js-mainSlider li').each(function(i) {
@@ -484,7 +462,7 @@ $(document).ready(function() {
 			mousewheel: false,
 			adaptiveHeight: true,
 			auto: false,
-			swipe: { 
+			swipe: {
 				onMouse: true,
 				onTouch: true
 			},
@@ -530,7 +508,7 @@ $(document).ready(function() {
 				$(this).parents('.js-rating').find('li').removeClass('active');
 				$(this).addClass('active');
 				$(this).prevAll().addClass('active');
-				
+
 				clearTimeout(hoverTimeout);
 			}
 		}, function() {
@@ -541,12 +519,12 @@ $(document).ready(function() {
 				}, 100);
 			}
 		});
-		
+
 		a.click(function() {
 			clearTimeout(hoverTimeout);
-		
+
 			$(this).parents('.js-rating').addClass('active');
-			
+
 			$(this).parents('.js-rating').find('li').removeClass('active');
 			$(this).parent().addClass('active');
 			$(this).parent().prevAll().addClass('active');
@@ -659,7 +637,7 @@ $(document).ready(function() {
 				}
 			};
 	    });
-		    
+
 
 		function getChar(event) {
 			if (event.which == null) {
@@ -668,7 +646,7 @@ $(document).ready(function() {
 			}
 			if (event.which != 0 && event.charCode != 0) {
 				if (event.which < 32) return null;
-				return String.fromCharCode(event.which) 
+				return String.fromCharCode(event.which)
 			}
 			return null;
 		}
@@ -683,7 +661,7 @@ $(document).ready(function() {
 					inputs = _.parent().find('input'),
 					timeout;
 
-				
+
 
 				if(_.find('li.active').length){
 					var index = +_.find('li.active').last().index();
@@ -753,12 +731,12 @@ function OpenWin(id) {
 function mapInit() {
 	/*var latlng = new google.maps.LatLng(55.873741, 37.434072);
 	var mapOptions = {
-		zoom: 12,  
+		zoom: 12,
 		center: latlng,
-		mapTypeId: google.maps.MapTypeId.ROADMAP, 
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		panControl:false,
 		streetViewControl:false,
-		mapTypeControl:false, 
+		mapTypeControl:false,
 		scaleControl: false,
 		scrollwheel: false,
 		zoomControl: true,
@@ -766,17 +744,17 @@ function mapInit() {
 			style: google.maps.ZoomControlStyle.LARGE,
 			position: google.maps.ControlPosition.LEFT_CENTER
 		}
-	}; 
-	var map = new google.maps.Map(document.getElementById('gmap1'), mapOptions); 
-	var image = new google.maps.MarkerImage('/bitrix/templates/lidamebel/images/pin.png', 
-		new google.maps.Size(65, 71), 
-		new google.maps.Point(0,0), 
+	};
+	var map = new google.maps.Map(document.getElementById('gmap1'), mapOptions);
+	var image = new google.maps.MarkerImage('/bitrix/templates/lidamebel/images/pin.png',
+		new google.maps.Size(65, 71),
+		new google.maps.Point(0,0),
 		new google.maps.Point(28, 50)
-	); 
+	);
 	var marker1 = new google.maps.Marker({
 		position: new google.maps.LatLng(55.873741, 37.434072),
 		map: map,
-		icon: image  
+		icon: image
 	});  */
 	ymaps.ready(function () {
 	    var myMap = new ymaps.Map('gmap1', {
@@ -802,16 +780,16 @@ var map2inited = false;
 function map2Init() {
 	if (!map2inited) {
 		map2inited = true;
-	
+
 		/*setTimeout(function() {
-			var latlng2 = new google.maps.LatLng(55.872599, 37.434887); 
+			var latlng2 = new google.maps.LatLng(55.872599, 37.434887);
 			var mapOptions2 = {
-				zoom: 12,  
+				zoom: 12,
 				center: latlng2,
-				mapTypeId: google.maps.MapTypeId.ROADMAP, 
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
 				panControl:false,
 				streetViewControl:false,
-				mapTypeControl:false, 
+				mapTypeControl:false,
 				scaleControl: false,
 				scrollwheel: false,
 				zoomControl: true,
@@ -819,17 +797,17 @@ function map2Init() {
 					style: google.maps.ZoomControlStyle.LARGE,
 					position: google.maps.ControlPosition.LEFT_CENTER
 				}
-			}; 
-			var map2 = new google.maps.Map(document.getElementById('gmap2'), mapOptions2); 
-			var image = new google.maps.MarkerImage('/bitrix/templates/lidamebel/images/pin.png', 
-				new google.maps.Size(65, 71), 
-				new google.maps.Point(0,0), 
+			};
+			var map2 = new google.maps.Map(document.getElementById('gmap2'), mapOptions2);
+			var image = new google.maps.MarkerImage('/bitrix/templates/lidamebel/images/pin.png',
+				new google.maps.Size(65, 71),
+				new google.maps.Point(0,0),
 				new google.maps.Point(28, 50)
-			); 
+			);
 			var marker2 = new google.maps.Marker({
 				position: new google.maps.LatLng(55.872599, 37.434887),
 				map: map2,
-				icon: image  
+				icon: image
 			});
 		}, 300);*/
 		setTimeout(function() {
