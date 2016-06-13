@@ -1159,7 +1159,7 @@ div.slides .caroufredsel_wrapper {
     display: table;
     clear: both;
 }
-#toggle-tab-1:checked ~ .tab__delivery {
+#ID_DELIVERY_ID_1:checked ~ .tab__delivery {
     display: inline-block;
     margin-top: 10px;
 }
@@ -1631,14 +1631,14 @@ body.space {
     display: table;
     clear: both;
 }
-.basket_table tr.total p, .order_registration p {
+/*.basket_table tr.total p, .order_registration p {
     font-family: Verdana, Arial, sans-serif;
     font-size: 11px;
     color: #c1bdbb;
     font-style: italic;
     text-transform: lowercase;
 }
-.order_registration .price_value span {
+.o*/rder_registration .price_value span {
     display: inline-block;
     width: 100%;
 }
