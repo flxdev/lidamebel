@@ -23,14 +23,13 @@ $(document).ready(function() {
 
 	$('.accordion .h2').each(function(){
 		var link = $(this),
-			content = link.next('ul');
-		if(link.parent().hasClass('no-accord')) {
-			//link.parent().addClass('active');
-			//content.show();
-		}
-		if (content.find('li').hasClass('active')) {
-			link.parent().addClass('active');
-			content.show();
+			content = link.next('ul'),
+			parent = link.parent();
+
+		
+		if (content.find('.active')) {
+			content.find('.active ul').show();
+			content.find('.active').parents('.left_nav_block').removeClass('active').siblings().removeClass('active');
 		}
 
 		link.on('click',function(){
@@ -53,20 +52,23 @@ $(document).ready(function() {
 	$(window).on('load', function(){
 		if($(window).width() <= 999) {
 			$('.accordion').find('.left_nav_block:first-child').removeClass('no-accord');
-			$('.accordion').find('.left_nav_block ul').hide().parent().removeClass('active');
+			$('.accordion').find('.left_nav_block ul').hide();
+			$('.accordion').find('.left_nav_block').removeClass('active').find('ul').hide();
 		} else {
 			$('.accordion').find('.left_nav_block:first-child').addClass('no-accord');
-			$('.accordion').find('.left_nav_block.active ul').show().parent().addClass('active');
+			$('.accordion').find('.left_nav_block ul .active').show();
 		}
 	});
 	$(window).on('resize', function(){
 		if($(window).width() <= 999) {
 			$('.accordion').find('.left_nav_block:first-child').removeClass('no-accord');
-			$('.accordion').find('.left_nav_block ul').hide().parent().removeClass('active');
+			$('.accordion').find('.left_nav_block .active ul').hide();
+			$('.accordion').find('.left_nav_block').removeClass('active').find('ul').hide()
 
 		} else {
 			$('.accordion').find('.left_nav_block:first-child').addClass('no-accord').find('> ul').show();
-			$('.accordion').find('.left_nav_block.active ul').show().parent().addClass('active');
+			$('.accordion').find('.left_nav_block ul .active').show();
+			$('.accordion').find('.left_nav_block ul .active ul').show();
 		}
 	});
 	$('.js-anchor').on('click', function(){
@@ -558,6 +560,10 @@ $(document).ready(function() {
 			$('.holder').each(function(){
 				var _ = $(this),
 					hold = $(this).parents('.field').find('.field__title');
+
+				hold.on('click', function(){
+					_.focus();
+				});
 
 				_.on('input', function(){
 					if($(this).val().length !== 0) {

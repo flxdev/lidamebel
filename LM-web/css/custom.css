@@ -45,7 +45,7 @@ span.h2 {
     display: block;
 }
 .article_block h2 {
-	color: #60221a;
+    color: #60221a;
 margin-bottom: 10px;
 }
 .main_slider span.h1 {
@@ -86,7 +86,7 @@ span.h1 {
     vertical-align: middle;
 }
 .filter ul li.disabled{
-	opacity:0.3;
+    opacity:0.3;
 }
 .filter ul li:nth-child(1){
     background: url('../images/first_element.jpg') no-repeat;
@@ -515,7 +515,7 @@ div.slides:after {
     margin-bottom: 5px;
 }
 .ymaps-2-1-34-islets_gotoymaps, .ymaps-2-1-34-copyright.ymaps-2-1-34-copyright_logo_no {
-	display: none!important;
+    display: none!important;
 }
 table.skid {
     margin-bottom: 10px;
@@ -653,20 +653,20 @@ table.skid tbody td {
     position: absolute;
 }
 .product_vertical .slide, .catalog_item {
-	height: 250px;
+    height: 250px;
 }
 .product_vertical .slide .description, .catalog_item .description {
-	height: 78px;
+    height: 78px;
 }
 .catalog_item .description a.details,
 .product_vertical .slide .description a.details {
-	right: 20px;
-	bottom: 0;
+    right: 20px;
+    bottom: 0;
 }
 .catalog_item .description .price,
 .product_vertical .slide .description .price {
-	left: 30px;
-	bottom: 0;
+    left: 30px;
+    bottom: 0;
 }
 .main_slider .slide_pagination {
     width: 190px;
@@ -687,7 +687,7 @@ table.skid tbody td {
     display: table;
 }
 #content .order_registration .checkout {
-	margin-top:20px;
+    margin-top:20px;
 }
 .col50 {
     width: 52%;
@@ -1030,12 +1030,12 @@ article p > span {
     background: rgba(0, 0, 0, 0) url("../images/badges.png") no-repeat scroll 0 -138px;
 }
 .hint {
-	color: #60221a;
-	left: 45px;
-	top: 3px;
+    color: #60221a;
+    left: 45px;
+    top: 3px;
 }
 .popup-content .description a.details {
-	position: relative;
+    position: relative;
 }
 .viewed_slider .slide_image img {
     height: 140px;
@@ -1148,7 +1148,7 @@ article p > span {
     color: #5d5551;    
 }
 .partners_item .price span {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 .partners_item .price::before {
     background: #422e2d none repeat scroll 0 0;
@@ -1187,7 +1187,7 @@ article p > span {
     z-index: 1;
 }
 .left_nav > .left_nav_block::after {
-	display: none;
+    display: none;
 }
 .accordion .left_nav_block {
     background: url(../images/left_nav_top2.jpg);
@@ -1209,9 +1209,11 @@ article p > span {
     background-image: url(../images/left_nav_top3.png);
     background-repeat: no-repeat;
 }
+.accordion .left_nav_block > ul {
+    padding: 20px 0;
+}
 .accordion .left_nav_block ul {
     display: none;
-    padding: 20px 0;
 }
 .left_nav .accordion .h2 {
     margin: 0 15px;
@@ -1302,10 +1304,10 @@ article p > span {
     content: "";
 }
 .accordion .left_nav_block:first-child>ul>li:last-child a {
-    color: #e6e0e0;
+    color: #fd5454;
 }
 #article {
-	height: 190px;
+    height: 190px;
 }
 /*--------------------------------------------------------------*/
 .manufacturers {
@@ -1462,14 +1464,14 @@ article p > span {
 
 
 .viewed_slider .description span {
-	white-space: nowrap;
-	display: inline-block;
-	width: 100%;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
 }
 
 .viewed_slider .description a.details, 
 .viewed_slider .description .price {
-	bottom: auto;
-	position: relative;
-	right: auto;
+    bottom: auto;
+    position: relative;
+    right: auto;
 }
