@@ -1587,6 +1587,7 @@ body.space {
     width: 23%;
     // margin-left: 0;
     max-width: 24%;
+    min-width: 24%;
 }
 .products_small_block .catalog_item img {
     margin: auto;
