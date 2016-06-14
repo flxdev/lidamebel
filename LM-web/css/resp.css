@@ -435,6 +435,7 @@ a[data-anchor]:hover {
     float: left;
     max-width: 618px;
     padding: 0;
+    width: 100%;
 }
 .descript {
     background: #fff none repeat scroll 0 0;
@@ -1158,7 +1159,7 @@ div.slides .caroufredsel_wrapper {
     display: table;
     clear: both;
 }
-#toggle-tab-1:checked ~ .tab__delivery {
+#ID_DELIVERY_ID_1:checked ~ .tab__delivery {
     display: inline-block;
     margin-top: 10px;
 }
@@ -1252,6 +1253,10 @@ div.slides .caroufredsel_wrapper {
     vertical-align: top;
     cursor: pointer;
 }
+.review__like-action .pos.active {
+    background-image: url(../images/pos-active.png);
+    color: #5aa551;
+}
 .review__like-action .neg {
     width: 50%;
     height: 26px;
@@ -1268,6 +1273,10 @@ div.slides .caroufredsel_wrapper {
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
+}
+.review__like-action .neg.active {
+    background-image: url(../images/neg-active.png);
+    color: #ff3101;
 }
 .review__content .review__title {
     font-family: Verdana, Arial, sans-serif;
@@ -1549,10 +1558,10 @@ body.space {
 #cart_popup .btn {
     margin-left: 40px;
 }
-.tabs__container .product_left {
+/*.tabs__container .product_left {
     float: none;
     max-width: 100%;
-}
+}*/
 .payment > img {
     margin-left: 0;
     margin-right: 5px;
@@ -1568,9 +1577,9 @@ body.space {
 .products_small_block .catalog_item:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.19);
 }
-// .products_small_block {
-//     overflow: visible;
-// }
+/*.products_small_block {
+     overflow: visible;
+}*/
 .products_small_block::after {
     content: '';
     display: table;
@@ -1623,14 +1632,14 @@ body.space {
     display: table;
     clear: both;
 }
-.basket_table tr.total p, .order_registration p {
+/*.basket_table tr.total p, .order_registration p {
     font-family: Verdana, Arial, sans-serif;
     font-size: 11px;
     color: #c1bdbb;
     font-style: italic;
     text-transform: lowercase;
 }
-.order_registration .price_value span {
+.o*/rder_registration .price_value span {
     display: inline-block;
     width: 100%;
 }
@@ -1874,9 +1883,6 @@ div.news-list img.preview_picture {
     padding: 0;
     text-align: right;
     vertical-align: top;
-}
-.bx_item_detail_rating .bx_item_rating {
-    text-align: -moz-center;
 }
 .bx_item_detail_rating .bx_stars_container {
     background: #9f9f9f none repeat scroll 0 0 / 100% 100%;

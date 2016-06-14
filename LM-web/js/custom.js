@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 	$('.accordion .h2').each(function(){
 		var link = $(this),
-		    content = link.next('ul');
+			content = link.next('ul');
 		if(link.parent().hasClass('no-accord')) {
 			//link.parent().addClass('active');
 			//content.show();
@@ -70,7 +70,7 @@ $(document).ready(function() {
 		}
 	});
 	$('.js-anchor').on('click', function(){
-	  	if($(this)[0].hasAttribute('data-tab')){
+		if($(this)[0].hasAttribute('data-tab')){
 			var attr = $(this).data('tab');
 			$('.js-tab').find('[data-link="'+attr+ '"]').trigger('click');
 		}
@@ -103,33 +103,33 @@ $(document).ready(function() {
 
 	//map
 	if ($('#map').length) {
-        /*function initialize() {
-            var mapOptions = {
-                zoom: 14,
-                disableDefaultUI: true,
-                scrollwheel: false,
-                panControl: false,
-                zoomControl: true,
-                zoomControlOptions: {
-                    style: google.maps.ZoomControlStyle.SMALL,
-                    position: google.maps.ControlPosition.RIGHT_CENTER
-                },
-                scaleControl: true,
-                center: new google.maps.LatLng(55.872686, 37.43495)
-            };
+		/*function initialize() {
+			var mapOptions = {
+				zoom: 14,
+				disableDefaultUI: true,
+				scrollwheel: false,
+				panControl: false,
+				zoomControl: true,
+				zoomControlOptions: {
+					style: google.maps.ZoomControlStyle.SMALL,
+					position: google.maps.ControlPosition.RIGHT_CENTER
+				},
+				scaleControl: true,
+				center: new google.maps.LatLng(55.872686, 37.43495)
+			};
 
-            map = new google.maps.Map(document.getElementById('map-canvas'),
-              mapOptions);
-            var image = '/bitrix/templates/lidamebel/images/marker.png';
-            var myLatLng = new google.maps.LatLng(55.872686, 37.43495);
-            var beachMarker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                icon: image,
+			map = new google.maps.Map(document.getElementById('map-canvas'),
+			  mapOptions);
+			var image = '/bitrix/templates/lidamebel/images/marker.png';
+			var myLatLng = new google.maps.LatLng(55.872686, 37.43495);
+			var beachMarker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				icon: image,
 		title:"г. Москва, ул. Свободы, 103, стр. 8"
-            });
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);*/
+			});
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);*/
 	var myMap;
 
 	var mapinit = false;
@@ -137,28 +137,28 @@ $(document).ready(function() {
 	function init () {
 		if (!mapinit) {
 			mapinit = true;
-		    myMap = new ymaps.Map('map', {
-		        center: [55.872686, 37.43495],
-		        zoom: 14,
-		        controls: ['zoomControl']
-		    }),
-		    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-		    	balloonContent: '<span class="img__bg"></span><p class="ymap__title">ООО "Юнипром" </p><h3>Адрес</h3><p> Москва, ул. Свободы, 103, стр. 8, оф. 1 (территория спортивного центра «Русь»)</p><h3>Телефоны:</h3><p>+7 (495) 902-51-05<br>+7 (916) 47-00-768</p><h3>Время работы</h3><p>Пн-Пт, 9:00-18:00 (офис/склад)<br>Сб-Вс, 10:00-12:00 (склад)</p>'
-		    },{
-		    	iconLayout: 'default#image',
-		    	iconImageHref: 'images/pin.png',
+			myMap = new ymaps.Map('map', {
+				center: [55.872686, 37.43495],
+				zoom: 14,
+				controls: ['zoomControl']
+			}),
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				balloonContent: '<span class="img__bg"></span><p class="ymap__title">ООО "Юнипром" </p><h3>Адрес</h3><p> Москва, ул. Свободы, 103, стр. 8, оф. 1 (территория спортивного центра «Русь»)</p><h3>Телефоны:</h3><p>+7 (495) 902-51-05<br>+7 (916) 47-00-768</p><h3>Время работы</h3><p>Пн-Пт, 9:00-18:00 (офис/склад)<br>Сб-Вс, 10:00-12:00 (склад)</p>'
+			},{
+				iconLayout: 'default#image',
+				iconImageHref: 'images/pin.png',
 			iconImageSize: [65, 71],
 			iconImageOffset: [-30, -71]
-		    });
-		    myMap.geoObjects.add(myPlacemark);
-		    myMap.behaviors.disable('scrollZoom');
+			});
+			myMap.geoObjects.add(myPlacemark);
+			myMap.behaviors.disable('scrollZoom');
 		}
 	}
-    };
+	};
 
 	// tabs
 	function tab() {
-       $(".js-tab").each(function(){
+	   $(".js-tab").each(function(){
 				var tab_link = $(this).find("a");
 				var tab_item = $(this).find("li");
 				var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
@@ -180,8 +180,8 @@ $(document).ready(function() {
 					return false;
 				});
 		});
-  	}
-  	setTimeout(function(){tab();},100);
+	}
+	setTimeout(function(){tab();},100);
 
 
 	$popupTip = $('.popup-tip.by-css');
@@ -219,22 +219,22 @@ $(document).ready(function() {
 	});
 */
 
-    $('#article').jScrollPane();
+	$('#article').jScrollPane();
 
 	$('#about').jScrollPane();
 
 
 	$('.scroll-pane').each(function(){
 		var api = $(this).data('jsp');
-	    var throttleTimeout;
-	    $(window).on('resize', function(){
-	    	if(!throttleTimeout) {
-	    		throttleTimeout = setTimeout(function(){
-	    			api.reinitialise();
-	    			throttleTimeout = null;
-	    		},50);
-	    	}
-	    });
+		var throttleTimeout;
+		$(window).on('resize', function(){
+			if(!throttleTimeout) {
+				throttleTimeout = setTimeout(function(){
+					api.reinitialise();
+					throttleTimeout = null;
+				},50);
+			}
+		});
 	});
 	$('.article_slider .bxslider').bxSlider({
 		auto: true,
@@ -542,92 +542,107 @@ $(document).ready(function() {
 	$(function(){
 		$('.ng-table').each(function(){
 			$(this).ngResponsiveTables({
-		    	smallPaddingCharNo: 13,
-		    	mediumPaddingCharNo: 18,
-		    	largePaddingCharNo: 30
-		  	});
+				smallPaddingCharNo: 13,
+				mediumPaddingCharNo: 18,
+				largePaddingCharNo: 30
+			});
 		  });
-	  	$('.filter, .product__article .js-tab-group .tabs').scrollTabs({
-	  		left_arrow_size: 0,
-      		right_arrow_size: 0,
-	  	});
-	  	if($('.review').length) {
-	  		$('.review_carousel-item').fancybox();
-	  	}
-	  	function placehold() {
-	  		$('.holder').each(function(){
-	  			var _ = $(this),
-	  				hold = $(this).parents('.field').find('.field__title');
+		$('.filter, .product__article .js-tab-group .tabs').scrollTabs({
+			left_arrow_size: 0,
+			right_arrow_size: 0,
+		});
+		if($('.review').length) {
+			$('.review_carousel-item').fancybox();
+		}
+		function placehold() {
+			$('.holder').each(function(){
+				var _ = $(this),
+					hold = $(this).parents('.field').find('.field__title');
 
-	  			_.on('input', function(){
-	  				if($(this).val().length !== 0) {
-	  					hold.hide();
-	  				} else {
-	  					hold.show();
-	  				}
-	  			});
-	  			if($(this).val().length !== 0) {
-  					hold.hide();
-  				} else {
-  					hold.show();
-  				}
-	  		});
-	  	};
-	  	placehold();
+				_.on('input', function(){
+					if($(this).val().length !== 0) {
+						hold.hide();
+					} else {
+						hold.show();
+					}
+				});
+				if($(this).val().length !== 0) {
+					hold.hide();
+				} else {
+					hold.show();
+				}
+			});
+		};
+		placehold();
 
-	  	$('.products_small_block').slick({
-	  		slidesToShow: 4,
-	  		slidesToScroll: 4,
-	  		responsive: [
-	  			{
-	  				breakpoint: 831,
-	  				settings: {
-	  					slidesToShow: 3,
-	  					slidesToScroll: 1
-	  				}
-	  			},
-	  			{
-	  				breakpoint: 640,
-	  				settings: {
-	  					slidesToShow: 2,
-	  					slidesToScroll: 1
-	  				}
-	  			},
-	  			{
-	  				breakpoint: 480,
-	  				settings: {
-	  					slidesToShow: 1,
-	  					slidesToScroll: 1
-	  				}
-	  			}
-	  		]
-	  	});
+		$('.products_small_block').slick({
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			responsive: [
+				{
+					breakpoint: 831,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 640,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
 
-	  	//dropzone
-	    var dropfile = $("#mydropzone");
+		//dropzone
+		var dropfile = $("#mydropzone");
 
-	    if(dropfile.length) {
-	        Dropzone.options.mydropzone = {
-	        	paramName: "file",
-	            uploadMultiple: true,
-	            maxFilesize: 15,
-	            dictDefaultMessage: "",
-	            addRemoveLinks: true,
-	            dictRemoveFile: '',
-	            createImageThumbnails: true,
-	            thumbnailWidth: 73,
+		if(dropfile.length) {
+			Dropzone.options.mydropzone = {
+				init: function() {
+					this.on("addedfile", function(file) { });
+					this.on("success", function(file) {
+					 });
+					this.on("removedfile", function(file) {
+						$.ajax({
+							type: "POST",
+							url: "/fileupl.php",
+							data: "del="+file['name'],
+							dataType: "html"
+						});
+					 });
+				},
+				acceptedFiles: 'image/*',
+				uploadMultiple: false,
+				paramName: "file",
+				maxFilesize: 15,
+				dictDefaultMessage: "",
+				addRemoveLinks: true,
+				dictRemoveFile: '',
+				createImageThumbnails: true,
+				thumbnailWidth: 73,
 				thumbnailHeight: 68,
+				dictInvalidFileType: 'Данный формат файла не поддерживается.',
 				previewTemplate: '<div class="dz-preview dz-file-preview"><div class="dz-details"><img data-dz-thumbnail /></div><div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div><div class="dz-success-mark"><span>✔</span></div><div class="dz-error-mark"><span>✘</span></div><div class="dz-error-message"><span data-dz-errormessage></span></div></div>'
-	        }
-	    }
+			}
+		}
 
-	    $('.popups .close').click(function() {
+		$('.popups .close').click(function() {
 			$(this).parents('.popups').fadeOut('slow');
 			$('body').removeClass('space');
 			return false;
 		});
-	    $('.keyup').each(function(){
-	    	$(this)[0].onkeypress = function(e) {
+		$('.keyup').each(function(){
+			$(this)[0].onkeypress = function(e) {
 				e = e || event;
 				if (e.ctrlKey || e.altKey || e.metaKey) return;
 				var chr = getChar(e);
@@ -636,7 +651,7 @@ $(document).ready(function() {
 					return false;
 				}
 			};
-	    });
+		});
 
 
 		function getChar(event) {
@@ -669,7 +684,7 @@ $(document).ready(function() {
 					inputs.val(index+1);
 				}
 
-				console.log(inputs.val())
+				//console.log(inputs.val())
 				item.on('mouseenter', function(){
 					clearTimeout(timeout);
 					var index = $(this).index();
@@ -757,7 +772,7 @@ function mapInit() {
 		icon: image
 	});  */
 	ymaps.ready(function () {
-	    var myMap = new ymaps.Map('gmap1', {
+		var myMap = new ymaps.Map('gmap1', {
 			center: [55.873741, 37.434072],
 			zoom: 14,
 			controls: ['zoomControl']
@@ -812,9 +827,9 @@ function map2Init() {
 		}, 300);*/
 		setTimeout(function() {
 			var myMap = new ymaps.Map('gmap2', {
-			    center: [55.872599, 37.434887],
-			    zoom: 14,
-			    controls: ['zoomControl']
+				center: [55.872599, 37.434887],
+				zoom: 14,
+				controls: ['zoomControl']
 			}),
 			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 				//hintContent: 'г. Москва, ул. Свободы, 103, стр. 8',
