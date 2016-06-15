@@ -316,8 +316,7 @@ table.delivery tbody td {
     display: table;
 }
 .trans img {
-    width: 73px;
-    height: 22px;
+    width: 110px;
     float: left;
     margin-bottom: 4px;
 }
@@ -1474,4 +1473,7 @@ article p > span {
     bottom: auto;
     position: relative;
     right: auto;
+}
+.description h4 {
+    margin-bottom: 5px;
 }

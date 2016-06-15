@@ -145,7 +145,7 @@ $(document).ready(function() {
 				controls: ['zoomControl']
 			}),
 			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-				balloonContent: '<span class="img__bg"></span><p class="ymap__title">ООО "Юнипром" </p><h3>Адрес</h3><p> Москва, ул. Свободы, 103, стр. 8, оф. 1 (территория спортивного центра «Русь»)</p><h3>Телефоны:</h3><p>+7 (495) 902-51-05<br>+7 (916) 47-00-768</p><h3>Время работы</h3><p>Пн-Пт, 9:00-18:00 (офис/склад)<br>Сб-Вс, 10:00-12:00 (склад)</p>'
+				balloonContent: '<div class="b-overlay"><span class="img__bg"></span><p class="ymap__title">ООО "Юнипром" </p><h3>Адрес</h3><p> Москва, ул. Свободы, 103, стр. 8, оф. 1 (территория спортивного центра «Русь»)</p><h3>Телефоны:</h3><p>+7 (495) 902-51-05<br>+7 (916) 47-00-768</p><h3>Время работы</h3><p>Пн-Пт, 9:00-18:00 (офис/склад)<br>Сб-Вс, 10:00-12:00 (склад)</p></div>'
 			},{
 				iconLayout: 'default#image',
 				iconImageHref: 'images/pin.png',
@@ -427,9 +427,8 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$('.popup .back_link').click(function() {
-		$('#overlay').fadeOut();
-		$(this).parent().fadeOut('slow');
+	$('.popups .back_link').click(function() {
+		$(this).parent('.popups').fadeOut('slow');
 		return false;
 	});
 	$('.search input[type=text], .call_form input[type=text], .review_form input[type=text]')
@@ -542,6 +541,15 @@ $(document).ready(function() {
 	});
 
 	$(function(){
+		if($('.show_more').length) {
+			$('.show_more').showMore({
+				speedDown: 300,
+				speedUp: 300,
+				height: '90px',
+				showText: 'Читать далее',
+				hideText: 'Свернуть'
+			})
+		}
 		$('.ng-table').each(function(){
 			$(this).ngResponsiveTables({
 				smallPaddingCharNo: 13,
