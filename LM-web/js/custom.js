@@ -541,6 +541,20 @@ $(document).ready(function() {
 	});
 
 	$(function(){
+		function toggleMenu() {
+			var menu = $('.menu'),
+				overlay = $('.mobile__overlay'),
+				close = overlay.find('.closes');
+
+			menu.on('click', function(){
+				overlay.fadeIn(150);
+				$('html').addClass('space');
+			});
+			close.on('click', function(){
+				overlay.fadeOut(150);
+				$('html').removeClass('space');
+			});
+		} toggleMenu();
 		if($('.show_more').length) {
 			$('.show_more').showMore({
 				speedDown: 300,

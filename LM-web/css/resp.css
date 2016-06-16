@@ -1,3 +1,6 @@
+html.space body {
+    overflow: hidden;
+}
 body {
     min-width: 320px;
 }
@@ -1972,6 +1975,75 @@ div.news-list img.preview_picture {
 .showmore_content { position:relative; overflow:hidden; }           
 .showmore_trigger { width:100%; height:20px; line-height:20px; cursor:pointer; }
 .showmore_trigger span { display:inline-block; color: #60221a; border-bottom: 1px dotted; }
+
+.mobile__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48,41,37,.98);
+    z-index: 1010;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 73px 5px 73px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: none;
+}
+// .mobile__overlay::after {
+//     content: '';
+//     display: inline-block;
+//     vertical-align: middle;
+//     width: 0;
+//     height: 100%;
+// }
+.mobile__overlay-inner {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 320px;
+}
+.mobile__menu .mobile__menu-item {
+    font-family: 'pf_din_text_comp_promedium', Arial, sans-serif;
+    font-size: 24px;
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+    text-decoration: none;
+}
+.mobile__menu .mobile__menu-item span {
+    text-decoration: underline;
+}
+.mobile__menu .mobile__menu-item.active {
+    color: #619a39;
+}
+.mobile__menu .mobile__menu-item.active span {
+    text-decoration: none;
+}
+.mobile__menu .mobile__menu-item .percent {
+    position: relative;
+    top: auto;
+    left: auto;
+    padding-right: 5px;
+}
+.closes {
+    width: 32px;
+    height: 32px;
+    top: 37px;
+    right: 24px;
+    position: fixed;
+    background: none;
+    outline: none;
+    border: none;
+    background-image: url(../images/button-close.png);
+    background-size: cover;
+}
 @media screen and (max-width: 1280px) {
     .catalog_item .propose_info li {
         font-size: 10px !important;
@@ -2513,6 +2585,7 @@ div.news-list img.preview_picture {
        top: auto;
        -webkit-transform: none;
        transform: none;
+       left: auto;
     }
     .prod__right .product_info {
         position: absolute;
