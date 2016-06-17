@@ -122,7 +122,7 @@ $(document).ready(function() {
 
 			map = new google.maps.Map(document.getElementById('map-canvas'),
 			  mapOptions);
-			var image = '/bitrix/templates/lidamebel/images/marker.png';
+			var image = '/bitrix/templates/lidamebel_new/images/marker.png';
 			var myLatLng = new google.maps.LatLng(55.872686, 37.43495);
 			var beachMarker = new google.maps.Marker({
 				position: myLatLng,
@@ -148,7 +148,7 @@ $(document).ready(function() {
 				balloonContent: '<div class="b-overlay"><span class="img__bg"></span><p class="ymap__title">ООО "Юнипром" </p><h3>Адрес</h3><p> Москва, ул. Свободы, 103, стр. 8, оф. 1 (территория спортивного центра «Русь»)</p><h3>Телефоны:</h3><p>+7 (495) 902-51-05<br>+7 (916) 47-00-768</p><h3>Время работы</h3><p>Пн-Пт, 9:00-18:00 (офис/склад)<br>Сб-Вс, 10:00-12:00 (склад)</p></div>'
 			},{
 				iconLayout: 'default#image',
-				iconImageHref: 'images/pin.png',
+				iconImageHref: '/bitrix/templates/lidamebel_new/images/pin.png',
 			iconImageSize: [65, 71],
 			iconImageOffset: [-30, -71]
 			});
@@ -177,7 +177,7 @@ $(document).ready(function() {
 						$(this).parents(".js-tab-group").find("."+index).find('.js-scroll').jScrollPane();
 					}
 					if ($('#map').length) {
-						init();
+							init();
 					}
 					return false;
 				});
@@ -190,11 +190,11 @@ $(document).ready(function() {
 	$popupWrapper = $('#popup-wrapper');
 
 
-	$popupTip.click(function() {
+	$popupTip.on('click',function() {
 		$popupWrapper.toggleClass('active');
 	});
 
-	$('.sort_nav ul li a').click(function() {
+	$('.sort_nav ul li a').on('click', function() {
 		$(this).toggleClass('up');
 	});
 
@@ -289,7 +289,7 @@ $(document).ready(function() {
 		]
 	});
 	(function(){
-		function init() {
+		function inits() {
 			if(window.matchMedia('(max-width: 639px)').matches){
 				if(!$('.news__gallery').hasClass('ready')){
 					$('.news__gallery').on('init', function(){
@@ -303,11 +303,11 @@ $(document).ready(function() {
 					$('.news__gallery').removeClass('ready');
 				}
 			}
-		} init();
+		} inits();
 
 
 		window.addEventListener('resize', function(){
-			init();
+			inits();
 		});
 	})();
 
@@ -427,8 +427,9 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$('.popups .back_link').click(function() {
-		$(this).parent('.popups').fadeOut('slow');
+	$('.popups .back_link').on('click',function() {
+		$(this).parents('.popups').fadeOut('slow');
+		$('body').removeClass('space');
 		return false;
 	});
 	$('.search input[type=text], .call_form input[type=text], .review_form input[type=text]')
@@ -454,8 +455,10 @@ $(document).ready(function() {
 		$('.js-mainSlider li').each(function(i) {
 			$(this).attr('rel', i)
 		});
-
-		$('.js-mainSlider').carouFredSel({
+		$('.main_slider .pagination li').each(function(i) {
+			$(this).attr('rel', i)
+		});
+		/*$('.js-mainSlider').carouFredSel({
 			prev: '.slide_pagination .prev_btn',
 			next: '.slide_pagination .next_btn',
 			items: 1,
@@ -482,6 +485,32 @@ $(document).ready(function() {
 			// auto: {
 			// 	timeoutDuration: 5000
 			// }
+		});*/
+		$('.js-mainSlider').slick({
+			arrows: false,
+			asNavFor: '.text_wrapper'
+		});
+		$('.text_wrapper').slick({
+			fade: true,
+			arrows: false
+		});
+		$('.js-mainSlider').on('afterChange', function(){
+			var index = $(this).find('.slick-current').attr('rel');
+			$('.pagination').find('li').eq(index).addClass('selected').siblings().removeClass('selected');
+		});
+		$('.main_slider').find('.pagination li').first().addClass('selected');
+		$('.main_slider').find('.pagination li').on('click', function(){
+			var index = $(this).attr('rel');
+			$('.js-mainSlider').slick('slickGoTo', index);
+			$(this).addClass('selected').siblings().removeClass('selected');
+		});
+		$('.main_slider').find('.prev_btn').on('click', function(event){
+			$('.js-mainSlider').slick('slickPrev');
+			event.preventDefault;
+		});
+		$('.main_slider').find('.next_btn').on('click', function(event){
+			$('.js-mainSlider').slick('slickNext');
+			event.preventDefault;
 		});
 		function frameSize(){
 			var fWidth = +$('.border').width(),
@@ -555,6 +584,13 @@ $(document).ready(function() {
 				$('html').removeClass('space');
 			});
 		} toggleMenu();
+		$('.ng-table').each(function(){
+			$(this).ngResponsiveTables({
+				smallPaddingCharNo: 13,
+				mediumPaddingCharNo: 18,
+				largePaddingCharNo: 30
+			});
+		  });
 		if($('.show_more').length) {
 			$('.show_more').showMore({
 				speedDown: 300,
@@ -564,13 +600,6 @@ $(document).ready(function() {
 				hideText: 'Свернуть'
 			})
 		}
-		$('.ng-table').each(function(){
-			$(this).ngResponsiveTables({
-				smallPaddingCharNo: 13,
-				mediumPaddingCharNo: 18,
-				largePaddingCharNo: 30
-			});
-		  });
 		$('.filter, .product__article .js-tab-group .tabs').scrollTabs({
 			left_arrow_size: 0,
 			right_arrow_size: 0,
@@ -581,7 +610,8 @@ $(document).ready(function() {
 		function placehold() {
 			$('.holder').each(function(){
 				var _ = $(this),
-					hold = $(this).parents('.field').find('.field__title');
+				    hold = $(this).parents('.field').find('.field__title'),
+				    vals = _.val();
 
 				hold.on('click', function(){
 					_.focus();
@@ -606,26 +636,31 @@ $(document).ready(function() {
 		$('.products_small_block').slick({
 			slidesToShow: 4,
 			slidesToScroll: 4,
+			arrows: false,
+			swipeToSlide: true,
 			responsive: [
 				{
 					breakpoint: 831,
 					settings: {
 						slidesToShow: 3,
-						slidesToScroll: 1
+						slidesToScroll: 1,
+						arrows: true
 					}
 				},
 				{
 					breakpoint: 640,
 					settings: {
 						slidesToShow: 2,
-						slidesToScroll: 1
+						slidesToScroll: 1,
+						arrows: true
 					}
 				},
 				{
 					breakpoint: 480,
 					settings: {
 						slidesToShow: 1,
-						slidesToScroll: 1
+						slidesToScroll: 1,
+						arrows: true
 					}
 				}
 			]
@@ -789,7 +824,7 @@ function mapInit() {
 		}
 	};
 	var map = new google.maps.Map(document.getElementById('gmap1'), mapOptions);
-	var image = new google.maps.MarkerImage('/bitrix/templates/lidamebel/images/pin.png',
+	var image = new google.maps.MarkerImage('/bitrix/templates/lidamebel_new/images/pin.png',
 		new google.maps.Size(65, 71),
 		new google.maps.Point(0,0),
 		new google.maps.Point(28, 50)
@@ -842,7 +877,7 @@ function map2Init() {
 				}
 			};
 			var map2 = new google.maps.Map(document.getElementById('gmap2'), mapOptions2);
-			var image = new google.maps.MarkerImage('/bitrix/templates/lidamebel/images/pin.png',
+			var image = new google.maps.MarkerImage('/bitrix/templates/lidamebel_new/images/pin.png',
 				new google.maps.Size(65, 71),
 				new google.maps.Point(0,0),
 				new google.maps.Point(28, 50)
@@ -864,7 +899,7 @@ function map2Init() {
 				//balloonContent: 'г. Москва, ул. Свободы, 103, стр. 8'
 			},{
 				iconLayout: 'default#image',
-				iconImageHref: 'images/pin.png',
+				iconImageHref: '/bitrix/templates/lidamebel_new/images/pin.png',
 				iconImageSize: [65, 71],
 				iconImageOffset: [-30, -71]
 			});
