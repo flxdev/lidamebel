@@ -672,9 +672,9 @@ article .article_slider .bx-pager a:hover {display: block; width: 8px; height: 8
 }
 
 @media screen and (max-width: 1074px) {
-    .propose_slider .slide {
-        width: 230px!important;
-    }
+    // .propose_slider .slide {
+    //     width: 230px!important;
+    // }
     .product_gallery_block, .product_table {width: 510px;}
     .product_gallery li {width:510px;}
     #content {margin-left: 220px}
