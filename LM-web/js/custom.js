@@ -21,6 +21,15 @@ $(document).ready(function() {
 		asNavFor: '.js-gallery'
 	});
 
+
+	//selectable
+	function selects(){
+		$('.select').fancySelect();
+	} 
+	if ( $('.select')) {
+		selects();
+	}
+
 	$('.accordion .h2').each(function(){
 		var link = $(this),
 			content = link.next('ul'),

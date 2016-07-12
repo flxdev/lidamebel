@@ -966,6 +966,7 @@ blockquote::after {
     position: absolute;
     z-index: 100;
     background-color: #f4f1ef;
+    min-width: 70px;
 }
 .certificates-collection .bx-pager {
     padding: 2px 30px;
@@ -1779,7 +1780,12 @@ body.space {
 .price__area {
     display: inline-block;
     width: 100%;
-    position: relative;
+    position: absolute;
+    bottom: 25px;
+}
+.price__area + .stock {
+    position: absolute;
+    bottom: 5px;
 }
 .price__area .price, .price__area .old__price {
     display: inline-block;
@@ -1892,6 +1898,125 @@ body.space {
     margin-bottom: 15px;
     padding-left: 5%;
     width: 33%;
+}
+/*--- multiple ---*/
+.sort_nav > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.selectable {
+    vertical-align: middle;
+    display: none;
+}
+.fancy-select {
+    position: relative;
+    margin-left: 10px;
+}
+.fancy-select .trigger {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    color: #60221a;
+    display: inline-block;
+    padding-right: 20px;
+    position: relative;
+    cursor: pointer;
+    line-height: 24px;
+}
+.fancy-select .trigger::after {
+    content: '';
+    width: 13px;
+    height: 8px;
+    background-image: url(../images/trigger-select.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+.fancy-select .trigger.open::after {
+    transform: rotate(-180deg)
+}
+.fancy-select .options {
+    position: absolute;
+    top: 100%;
+    width: 269px;
+    margin-top: 10px;
+    background-color: #fff;
+    z-index: 201;
+    border: 1px solid #e1dcd9;
+    padding: 5px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visisbility 0.3s ease;
+}
+.fancy-select .options.open {
+    visibility: visible;
+    opacity: 1;
+}
+.fancy-select .options li {
+    display: inline-block;
+    width: 100%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    color: #60221a;
+    padding: 10px 30px 10px 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    margin-left: 0;
+}
+.fancy-select .options li.selected {
+    color: #3f3231;
+    background-color: #f4f1ef;
+}
+.fancy-select .options li.selected::after {
+    content: '';
+    width: 13px;
+    height: 11px;
+    position: absolute;
+    background-image: url(../images/selected.png);
+    top: 14px;
+    right: 10px;
+}
+@media screen and (max-width: 735px) {
+    .selectable {
+        display: inline-block;
+    }
+    .sort_nav > ul {
+        display: none;
+    }
+    .sort_nav > span {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .sort_nav > span {
+        font-size: 12px;
+    }
+    .fancy-select .trigger {
+        font-size: 12px;
+    }
+    .fancy-select .options {
+        width: 190px;
+    }
+    .fancy-select .options li {
+        padding: 5px 30px 5px 20px;
+        font-size: 12px;
+    }
+    .fancy-select .options li.selected::after {
+        top: 7px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .fancy-select .options {
+        width: 150px;
+    }
+    .fancy-select .options li {
+        padding-right: 45px;
+    }
 }
 @media (max-width: 960px) {
     .grid2x1 .bx_sidebar {
@@ -2318,7 +2443,7 @@ div.news-list img.preview_picture {
 }
 @media screen and (max-width: 999px) {
     .product_item .description {
-        height: 120px;
+        height: 100px;
     }
     .description h4 {
         font-size: 15px;
@@ -2755,6 +2880,9 @@ div.news-list img.preview_picture {
     }
 }
 @media screen and (max-width: 735px) {
+    .certificates-collection .bx-pager {
+    display: none;
+    }
     .rating-status {
         left: 100%;
     }
@@ -3780,4 +3908,18 @@ div.news-list img.preview_picture {
 }
 .call_form input.error[type="text"], .quick_form input.error[type="text"], #content .review_form input.error[type="text"], #content .review_form textarea.error {
     border-color: #fd5731;
+}
+#content .products_small_block .slick-arrow {
+    height: 100%;
+    padding: 0;
+    width: 20px;
+    top: 0;
+}
+#content .products_small_block .slick-arrow.slick-prev {
+    left: 0.5%;
+    background-position: 50%;
+}
+#content .products_small_block .slick-arrow.slick-next {
+    right: 0;
+    background-position: 50%;
 }
