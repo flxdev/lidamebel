@@ -1958,9 +1958,6 @@ body.space {
 .fancy-select .options li {
     display: inline-block;
     width: 100%;
-    font-family: Verdana, Arial, sans-serif;
-    font-size: 16px;
-    color: #60221a;
     padding: 10px 30px 10px 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -1969,7 +1966,6 @@ body.space {
     margin-left: 0;
 }
 .fancy-select .options li.selected {
-    color: #3f3231;
     background-color: #f4f1ef;
 }
 .fancy-select .options li.selected::after {
@@ -1980,6 +1976,14 @@ body.space {
     background-image: url(../images/selected.png);
     top: 14px;
     right: 10px;
+}
+.fancy-select .options li a {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    color: #60221a;
+}
+.fancy-select .options li.selected a {
+    color: #3f3231;
 }
 @media screen and (max-width: 735px) {
     .selectable {

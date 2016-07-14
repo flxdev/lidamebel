@@ -24,7 +24,11 @@ $(document).ready(function() {
 
 	//selectable
 	function selects(){
-		$('.select').fancySelect();
+		$('.select').fancySelect({
+			optionTemplate: function(optionEl){
+				return '<a href="' + optionEl.data('link') + '">'+ optionEl.text() +'</a>';
+			}
+		});
 	} 
 	if ( $('.select')) {
 		selects();
