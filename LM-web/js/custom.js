@@ -30,9 +30,92 @@ $(document).ready(function() {
 			}
 		});
 	} 
-	if ( $('.select')) {
+	if ( $('.select').length) {
 		selects();
 	}
+
+	$(".select-cust__drop-scroller .scroll").jScrollPane();
+
+	function filterToggle() {
+		var trigger = $(".search-filter__trigger"),
+			action = trigger.parent().find(".search-filter__action");
+
+		trigger.on("click", function(event){
+
+			event.stopPropagation();
+
+			if($(this).hasClass("open")) {
+				$(this).removeClass("open");
+				action.removeClass("open");
+			} else {
+				$(this).addClass("open");
+				action.addClass("open");
+			}
+		});
+
+		trigger.parent().on("click", function(event){
+			event.stopPropagation();
+		});
+
+		$(document).on("click", function(){
+			trigger.removeClass("open");
+			action.removeClass("open");
+		});
+
+		$(window).on("resize", function() {
+			if($(window).width() > 1024) {
+				trigger.removeClass("open");
+				action.removeClass("open");
+			}
+		})
+	} filterToggle();
+
+
+	//custom select for yandex filter
+	function selectY() {
+		var select = $('.select-cust'),
+			trigger = select.find('.select-cust__trigger'),
+			drop = select.find(".select-cust__drop"),
+			dropItem = drop.find(".item"),
+			vl = drop.find('input:checked').val();
+
+		trigger.find('span').text(vl);
+
+
+		trigger.on("click", function(event){
+			var _ = $(this);
+
+			event.stopPropagation();
+
+			if(_.hasClass("open")){
+				_.removeClass("open");
+				drop.removeClass("open");
+			} else {
+				_.addClass("open");
+				drop.addClass("open");
+			}
+		});
+
+		dropItem.on("click", function(){
+			var _ = $(this),
+				val = _.find('input').val();
+			trigger.find('span').text(val);
+
+			trigger.removeClass("open");
+			drop.removeClass("open");
+		});
+
+		$(document).on("click", function(){
+			trigger.removeClass("open");
+			drop.removeClass("open");
+		})
+
+	} selectY();
+
+	// $(".inputs").find("input").on("keypress", function(key){
+	// 	if((key.charCode < 40 || key.charCode > 41) && (key.charCode < 48 || key.charCode > 57))
+	// 			return false;
+	// });
 
 	$('.accordion .h2').each(function(){
 		var link = $(this),
