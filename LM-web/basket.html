@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="./css/style.css" type="text/css"/>
         <link rel="stylesheet" href="./css/custom.css" type="text/css"/>
         <link rel="stylesheet" href="./css/resp.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/wish.css" type="text/css"/>
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -30,6 +31,7 @@
         <script type="text/javascript" src="js/dropzone.min.js"></script>
         <script type="text/javascript" src="js/jquery.form-validator.min.js"></script> 
         <script src="js/custom.js"></script>
+        <script src="js/wish.js"></script>
     </head>
     <body>
 		<div class="preloader"></div>
@@ -354,64 +356,139 @@
                             </ul>
                         </div>
                         <h1>корзина</h1>
-                        <div class="basket">
-                            <table class="basket_table ng-table responsive">
-                                <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th>стоимость</th>                 
-                                    <th>Объём</th>
-                                    <th>Масса</th>
-                                    <th>Скидка</th>
-                                    <th>Количество</th>
-                                    <th>цена</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <td><a href="#"><img src="./images/pr_sm1.jpg"  alt="" /></a></td>
-                                    <td><h3><a href="#">Комод фаина</a></h3></td>
-                                    <td>253 500 р</td>
-                                    <td>500</td>
-                                    <td>50 кг</td>
-                                    <td>30%</td>
-                                    <td>
-                                        <div class="number">
-                                            <span class="minus">-</span>
-                                            <input type="text" class="keyup" value="1"/>
-                                            <span class="plus">+</span>
-                                        </div>
-                                    </td>
-                                    <td>3 500 р</td>
-                                    <td><a href="#" class="delete_btn"></a></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#"><img src="./images/pr_sm2.jpg"  alt="" /></a></td>
-                                    <td><h3><a href="#">шкаф геннадий</a></h3></td>
-                                    <td>3 500 р</td>
-                                    <td>5000</td>
-                                    <td>100 кг</td>
-                                    <td>30%</td>
-                                    <td>
-                                        <div class="number">
-                                            <span class="minus">-</span>
-                                            <input type="text" class="keyup" value="1"/>
-                                            <span class="plus">+</span>
-                                        </div>
-                                    </td>
-                                    <td>607 000 р</td>
-                                    <td><a href="#" class="delete_btn"></a></td>
-                                </tr>
-                                <tr class="total">
-                                    <td colspan="9"><span>Итого: 610 500 р</span><p>Без учета доставки</p></td>
-                                </tr>
-                            </table>
-                            <div class="bx_ordercart_order_pay_center">
-                                <div class="recalc">
-                                    <button value="Пересчитать" name="BasketRefresh" class="bt2" type="submit"><span>Пересчитать</span></button>
+                        <div class="characteristic basket-outer">
+                        <div class="tabs__container">
+                            <div class="js-tab-group">
+                                <div class="tabs">
+                                    <ul class="tabs_list js-tab cart_tab-list">
+                                        <li class="is-active">
+                                            <a data-link="js-tab1">В корзине</a>
+                                        </li>
+                                        <li>
+                                            <a data-link="js-tab2">Отложенные товары</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <a class="checkout" onclick="checkOut(); yaCounter25231718.reachGoal('order'); return true;" href="javascript:void(0)"><span>Оформить заказ</span></a>
+
+                                <div class="js-tab-cont js-tab1">
+                                    <div class="basket">
+                                    <h3>К СОЖАЛЕНИЮ, ВАША КОРЗИНА ПОКА ПУСТА</h3>
+                                        <table class="basket_table ng-table responsive">
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th>стоимость</th>            
+                                                <th>Объём</th>
+                                                <th>Масса</th>
+                                                <th>Скидка</th>
+                                                <th>Количество</th>
+                                                <th>цена</th>
+                                                <th></th>
+                                            </tr>
+                                            <tr>
+                                                <td class="small-padding tdno0"><a href="#"><img src="./images/pr_sm1.jpg"  alt="" /></a></td>
+                                                <td class="small-padding tdno1"><h3><a href="#">Комод фаина</a></h3></td>
+                                                <td class="small-padding tdno2">253 500 р</td>
+                                                <td class="small-padding tdno3">500</td>
+                                                <td class="small-padding tdno4">50 кг</td>
+                                                <td class="small-padding tdno5">30%</td>
+                                                <td class="small-padding tdno6">
+                                                    <div class="number">
+                                                        <span class="minus">-</span>
+                                                        <input type="text" class="keyup" value="1"/>
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </td>
+                                                <td class="small-padding tdno7">3 500 р</td>
+                                                <td class="small-padding tdno8"><a href="#" class="delete_btn"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#"><img src="./images/pr_sm2.jpg"  alt="" /></a></td>
+                                                <td><h3><a href="#">шкаф геннадий</a></h3></td>
+                                                <td>3 500 р</td>
+                                                <td>5000</td>
+                                                <td>100 кг</td>
+                                                <td>30%</td>
+                                                <td>
+                                                    <div class="number">
+                                                        <span class="minus">-</span>
+                                                        <input type="text" class="keyup" value="1"/>
+                                                        <span class="plus">+</span>
+                                                    </div>
+                                                </td>
+                                                <td>607 000 р</td>
+                                                <td><a href="#" class="delete_btn"></a></td>
+                                            </tr>
+                                            <tr class="total">
+                                                <td colspan="9" class="small-padding tdno8"><span>Итого: 610 500 р</span><p>Без учета доставки</p></td>
+                                            </tr>
+                                        </table>
+                                        <div class="bx_ordercart_order_pay_center">
+                                            <div class="recalc">
+                                                <button value="Пересчитать" name="BasketRefresh" class="bt2" type="submit"><span>Пересчитать</span></button>
+                                            </div>
+                                            <a class="checkout" onclick="checkOut(); yaCounter25231718.reachGoal('order'); return true;" href="javascript:void(0)"><span>Оформить заказ</span></a>
+                                        </div>
+                                        <a href="#" class="back_link">Вернуться в каталог</a>
+                                    </div>
+                                </div>
+                                <div class="js-tab-cont js-tab2">
+                                    <div class="basket">
+                                    <h3>К СОЖАЛЕНИЮ, ВАШ список желаний пуст</h3>
+                                        <table class="basket_table ng-table responsive">
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th>стоимость</th>            
+                                                <th>Объём</th>
+                                                <th>Масса</th>
+                                                <th>Скидка</th>
+                                                <th>Кол-во</th>
+                                                <th>цена</th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                            <tr>
+                                                <td class="small-padding tdno0"><a href="#"><img src="./images/pr_sm1.jpg"  alt="" /></a></td>
+                                                <td class="small-padding tdno1"><h3><a href="#">Комод фаина</a></h3></td>
+                                                <td class="small-padding tdno2">253 500 р</td>
+                                                <td class="small-padding tdno3">500</td>
+                                                <td class="small-padding tdno4">50 кг</td>
+                                                <td class="small-padding tdno5">30%</td>
+                                                <td class="small-padding tdno6">
+                                                    1шт.
+                                                </td>
+                                                <td class="small-padding tdno7">3 500 р</td>
+                                                <td class="small-padding tdno8">
+                                                    <a href="javascript:void(0);" onclick="OpenWin('cart_popup')" class="btn cart_btn"><span><img src="./images/cart_icon.png"  alt="" /></span></a>
+                                                </td>
+                                                <td class="small-padding tdno9"><a href="#" class="delete_btn"></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#"><img src="./images/pr_sm2.jpg"  alt="" /></a></td>
+                                                <td><h3><a href="#">шкаф геннадий</a></h3></td>
+                                                <td>3 500 р</td>
+                                                <td>5000</td>
+                                                <td>100 кг</td>
+                                                <td>30%</td>
+                                                <td>
+                                                    1шт.
+                                                </td>
+                                                <td>607 000 р</td>
+                                                <td class="small-padding tdno8">
+                                                    <a href="javascript:void(0);" onclick="OpenWin('cart_popup')" class="btn cart_btn"><span><img src="./images/cart_icon.png"  alt="" /></span></a>
+                                                </td>
+                                                <td><a href="#" class="delete_btn"></a></td>
+                                            </tr>
+                                        </table>
+                                        <form class="bx_ordercart_order_pay_center wish-email-cont js-validate">
+                                            <span class="email-text">Не потеряйте список отложенных товаров. Отправьте его на ваш e-mail. </span>
+                                            <input type="text" placeholder = 'E-mail' class="holder" data-validation = 'email' data-validation-error-msg="Неправильный E-mail">
+                                            <button type="submit" class="checkout" ><span>Отправить список</span></button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#" class="back_link">Вернуться в каталог</a>
                         </div>
                     </div>
                 </div>
