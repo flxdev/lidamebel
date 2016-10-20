@@ -64,12 +64,28 @@
 	background-position: left bottom;
 	line-height: 1.7;
 }
+
 .prices_box .wish-cont .wish-link.active{
 	opacity:1;
+}
+.prices_box .wish-cont .wish-link.active .wish-text.wish{
+	display: inline;
+}
+.prices_box .wish-cont .wish-link.active .wish-text.wished{
+	display: none;
+}
+.prices_box .wish-cont .wish-link.wished.active .wish-text.wish{
+	display: none;
+}
+.prices_box .wish-cont .wish-link.wished.active .wish-text.wished{
+	display: inline;
 }
 .prices_box .wish-cont .wish-link.wished.active{
 	color:#432f2e;
 }
+/*.prices_box .wish-cont .wish-link.wished.active{
+	color:#432f2e;
+}*/
 .prices_box .wish-cont{
 	position: static;
 	margin: 14px auto 0;

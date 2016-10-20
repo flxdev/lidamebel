@@ -25,11 +25,19 @@ $(document).ready(function(){
 	};
 	function Wish(){
 		var trigger = $('.wish-link');
-		var act = "active"
-		trigger.on('click',function(e){
-			e.preventDefault();
+
+		trigger.each(function(){
 			var _ = $(this);
-			_.removeClass(act).siblings().addClass(act);
+			_.on('click',function(e){
+				e.preventDefault();
+				if(!_.hasClass('wished')){
+					_.addClass('wished');
+				}
+				else{
+					_.removeClass('wished');
+				}
+			})
 		})
+
 	} Wish();
 })
