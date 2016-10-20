@@ -23,4 +23,13 @@ $(document).ready(function(){
 			});
 		});
 	};
+	function Wish(){
+		var trigger = $('.wish-link');
+		var act = "active"
+		trigger.on('click',function(e){
+			e.preventDefault();
+			var _ = $(this);
+			_.removeClass(act).siblings().addClass(act);
+		})
+	} Wish();
 })
