@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="./css/style.css" type="text/css"/>
         <link rel="stylesheet" href="./css/custom.css" type="text/css"/>
         <link rel="stylesheet" href="./css/resp.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/wish.css" type="text/css"/>
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -30,6 +31,9 @@
         <script type="text/javascript" src="js/dropzone.min.js"></script>
         <script type="text/javascript" src="js/jquery.form-validator.min.js"></script> 
         <script src="js/custom.js"></script>
+        <script src="js/wish.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.10/js/jquery.suggestions.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/jquery.suggestions/16.10/css/suggestions.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
 		<div class="preloader"></div>
@@ -390,6 +394,42 @@
                                             </div>
                                         </div>
                                         <p>* Предлагаем услугу “Четкий час”: для более точной доставки</p>
+                                    </div>
+                                    <div class="delivery_calc">
+                                        <h3>калькулятор расчета стоимости доставки по Москве, московской и соседним областям</h3>
+                                        <p>Для расчета доставки введите ваш адрес в поле поиска ниже. Фактическая стоимость может отличаться от расчётной, например, из-за объезда в связи с ремонтом дороги и т.п. </p>
+                                        <form action="" class='delivery-form'>
+                                             <input type="hidden" name="DELIVERY_MAIN_DISTANCE" value="" class="addr_dist">
+                                            <div class="field__body">
+                                                <input type="text" class="holder address-region" placeholder='Введите адрес доставки'>
+                                            </div>
+                                            <div class="field__submit">
+                                                <a href="javascript:void();" onclick=" event.preventDefault(); AddPlacemark(lat,lon,myMap);" class="checkout js-velivery-btn disabled">
+                                                    <span>Найти</span>
+                                                </a>
+                                            </div>
+                                        </form>
+                                        <div class="delivery_calc-map">
+                                            <div id="map-delivery"></div>
+                                        </div>
+                                        <div class="box_attention box_attention-mapresult">
+                                            <p>Адрес доставки:
+                                                <strong>
+                                                    Ленина 11, Петушки, Московская обл., Россия*
+                                                </strong>
+                                            </p>
+                                            <p>Расстояние:
+                                                <strong>
+                                                    106 км от МКАД
+                                                </strong>
+                                            </p>
+                                            <p>Стоимость доставки:
+                                                <strong>
+                                                    5740 рублей
+                                                </strong>
+                                            </p>
+                                            <i>* Возможность доставки товара по указанному адресу уточняйте у менеджера интернет-магазина.</i>
+                                        </div>
                                     </div>
                                     <div class="delivery_tariffs">
                                         <h3>Тарифы</h3>
