@@ -23,23 +23,6 @@ $(document).ready(function(){
 			});
 		});
 	};
-	function Wish(){
-		var trigger = $('.wish-link');
-
-		trigger.each(function(){
-			var _ = $(this);
-			_.on('click',function(e){
-				e.preventDefault();
-				if(!_.hasClass('wished')){
-					_.addClass('wished');
-				}
-				else{
-					_.removeClass('wished');
-				}
-			})
-		})
-
-	} Wish();
 	
 	if($('#map-delivery').length){
 
@@ -89,8 +72,27 @@ $(document).ready(function(){
 		}
 	}
 	AddressInput();
+	var productPreview = document.querySelectorAll('.js-preview');
+	productPrev = new PreviewPop(productPreview);
 });
-var ьнplacemark,myMap;
+function Wish(){
+	var trigger = $('.wish-link');
+
+	trigger.each(function(){
+		var _ = $(this);
+		_.on('click',function(e){
+			e.preventDefault();
+			if(!_.hasClass('wished')){
+				_.addClass('wished');
+			}
+			else{
+				_.removeClass('wished');
+			}
+		})
+	})
+
+} Wish();
+var myplacemark,myMap;
 function AddressInput(){
 	var addresBlock = $('.delivery-form'),
 		serviceUrl = "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
@@ -137,6 +139,110 @@ function AddressInput(){
 			}
 		});
 	});
+}
+function PreviewPop(el){
+	this.el = el;
+	this.options = {
+		modal: 'preview-popup',
+		bodyCls: 'space',
+		showModal: 'open-modal',
+		closeModal: '.closeel',
+		contentCont: '.js-prev-popup',
+		preload: '.preloader',
+		prlCls: 'success'
+	}
+	this.prev;
+	this.init();
+}
+PreviewPop.prototype = {
+	init: function(){
+		this.body = document.body;
+		this.modal = document.getElementById(this.options.modal);
+		this.preloader = this.modal.querySelector(this.options.preload);
+		this.contentContainer = this.modal.querySelector(this.options.contentCont);
+		this.elements = this.el;
+		this.eventHandler();
+	},
+	eventHandler: function(){
+		var self = this;
+		var lng = this.elements.length;
+		for(i = 0; i < lng; i++){
+			this.elements[i].addEventListener('click', function(event){
+				var val = this.getAttribute('data-target');
+				self.openModal(val);
+				self.addCloseEvent();
+			});
+		}
+	},
+	openModal: function(target){
+		this.modal.classList.add(this.options.showModal);
+		this.body.classList.remove(this.options.bodyCls);
+		if(target != this.prev){
+				this.ajxRequest(target);
+			}else{
+				this.preloader.classList.add(this.options.prlCls);
+			}
+		this.closeSel = this.modal.querySelector(this.options.closeModal);
+	},
+	addCloseEvent: function(){
+		var self = this;
+		this.closeSel.onclick = function() {
+			self.closeModal();
+		}
+		this.modal.onclick = function() {
+			self.closeModal();
+		}
+		this.contentContainer.onclick = function(e) {
+			e.stopPropagation()
+		}
+	},
+	closeModal: function(){
+		var self = this;
+		this.modal.classList.remove(this.options.showModal);
+		this.body.classList.remove(this.options.bodyCls);
+		setTimeout(function(){
+			self.preloader.classList.remove(self.options.prlCls);
+		},300)
+	},
+	ajxRequest: function(link){
+		var self = this;
+		var loader = this.preloader;
+		var cont = this.contentContainer;
+		$.ajax({
+			url: link,
+			dataType: "html",
+			error: function(){
+				
+			},
+			success: function(content) {
+				var mainContent = $(content).html();
+				$(cont).html(mainContent).promise().done(function(){
+					Wish();
+					
+					var gallery = $('.js-gallery'),
+						gallery__pager = $('.gallery__pager');
+
+					gallery.slick({
+						arrows: false,
+						asNavFor: '.gallery__pager',
+						fade: true,
+						swipe: false
+					});
+					gallery__pager.slick({
+						arrows: false,
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						variableWidth: true,
+						focusOnSelect: true,
+						asNavFor: '.js-gallery'
+					});
+					loader.classList.add(self.options.prlCls);
+					self.prev = link;
+				});
+			}
+		})
+	}
+
 }
 function AddPlacemark(lat,lon,myMap){
 	// с большой вероятностью строчка ниже удалит еще и области, а не только метку
