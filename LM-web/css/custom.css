@@ -2019,7 +2019,7 @@ article p > span {
 }
 .main_slider .text_wrapper .news-slide__inner.gr,
 .main_slider .text_wrapper .news-slide__inner.re{
-    background: url('../images/whiteWoodBG.png') 50% 50%;
+    background-position: 50% 50%;
     -webkit-background-size: cover;
     background-size: cover;
 }
