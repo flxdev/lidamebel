@@ -1964,11 +1964,23 @@ article p > span {
 
 
 /*TODO #1 11.04.2018*/
+.main_slider.advanced{
+    padding: 15px 0 15px;
+}
+.main_slider.advanced .js-mainSlider{
+    margin: 15px 0!important;
+}
 .main_slider .text_wrapper{
     width: 360px;
     top: 0;
     right: 0;
     height: 100%;
+}
+.main_slider .text_wrapper.hidden{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    width: 0px;
 }
 .main_slider .text_wrapper .slick-list, .main_slider .text_wrapper .slick-track{
     height: 100%;
@@ -2107,9 +2119,6 @@ article p > span {
     display: inline-block;
     margin-bottom: 0px;
 }
-.news-slide__inner.re .news-slide__label{
-    color: #ef0606!important;
-}
 .news-slide__text{
     margin-bottom: 10px;
 }
@@ -2148,4 +2157,24 @@ article p > span {
     .main_slider .text_wrapper .slick-track{
         height: 300px;
     }
+}
+
+/*TODO 12.04.2018*/
+.divider{
+    height:  20px;
+}
+.news-slide__inner.re .news-slide__label{
+    color: #ef0606!important;
+}
+#content ul, #content ol{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+#content ul{
+    list-style-type: disc;
+    margin-left: 15px;
+}
+.js-tab-group .caroufredsel_wrapper{
+    min-width: 320px;
 }
