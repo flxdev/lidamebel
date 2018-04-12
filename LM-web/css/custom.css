@@ -2107,6 +2107,9 @@ article p > span {
     display: inline-block;
     margin-bottom: 0px;
 }
+.news-slide__inner.re .news-slide__label{
+    color: #ef0606!important;
+}
 .news-slide__text{
     margin-bottom: 10px;
 }
