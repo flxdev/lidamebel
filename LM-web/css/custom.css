@@ -1964,9 +1964,6 @@ article p > span {
 
 
 /*TODO #1 11.04.2018*/
-.main_slider.advanced{
-    padding: 15px 0 15px;
-}
 .main_slider.advanced .js-mainSlider{
     margin: 15px 0!important;
 }
@@ -2166,15 +2163,14 @@ article p > span {
 .news-slide__inner.re .news-slide__label{
     color: #ef0606!important;
 }
-ul.list-dots, ol.list-numbs{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: block;
-}
-ul.list-dots{
-    list-style-type: disc;
-    margin-left: 15px;
-}
 .js-tab-group .caroufredsel_wrapper{
     min-width: 320px;
+}
+.content-article p,
+.content-article h1,
+.content-article h2,
+.content-article h3,
+.content-article h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
