@@ -2174,3 +2174,7 @@ article p > span {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.content-article ul li {
+    margin-bottom:  10px;
+}
