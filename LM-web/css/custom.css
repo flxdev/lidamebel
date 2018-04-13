@@ -2159,21 +2159,12 @@ article p > span {
     }
 }
 
-/*TODO 12.04.2018*/
+/*TODO 13.04.2018*/
 .divider{
     height:  20px;
 }
 .news-slide__inner.re .news-slide__label{
     color: #ef0606!important;
-}
-#content ul, #content ol{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: block;
-}
-#content ul{
-    list-style-type: disc;
-    margin-left: 15px;
 }
 .js-tab-group .caroufredsel_wrapper{
     min-width: 320px;
