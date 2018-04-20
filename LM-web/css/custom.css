@@ -1967,6 +1967,32 @@ article p > span {
 .main_slider.advanced .js-mainSlider{
     margin: 15px 0!important;
 }
+#content .main_slider .slider-nav .slick-dots li{
+    width: auto;
+    height: auto;
+}
+#content .main_slider .slider-nav .slick-dots li a{
+    border: 2px solid #fff;
+    background: transparent;
+    width: 8px;
+    height: 8px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+#content .main_slider .slider-nav .slick-dots li.slick-active a{
+    background: #fff;
+}
+#content .main_slider .slider-nav .slick-dots li a:hover{
+    border: 2px solid #5a8e35;
+    background: #5a8e35;
+}
+#content .main_slider .slider-nav{
+    left: 20px;
+    bottom: 16px;
+    padding-left: 0;
+    transform: none;
+}
 .main_slider .text_wrapper{
     width: 360px;
     top: 0;
@@ -1984,9 +2010,6 @@ article p > span {
 }
 .main_slider .slick-arrow{
     display: none!important;
-}
-.main_slider .slider-nav{
-    padding-left: 0!important;
 }
 .main_slider .text_wrapper .text{
     background: transparent;
@@ -2118,6 +2141,22 @@ article p > span {
 }
 .news-slide__text{
     margin-bottom: 10px;
+    padding-right: 55px;
+}
+.main_slider .text_wrapper .slick-list{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.js-tab-cont .pagin ul:not(.cust_list){
+    margin-top: 0;
+    list-style-type: none;
+}
+.js-tab-cont .slides ul.slides_list{
+    padding-left: 0;
+}
+.box_info .slides .caroufredsel_wrapper{
+    margin-top: 0!important;
 }
 
 @media screen and (max-width: 639px) {
@@ -2125,11 +2164,15 @@ article p > span {
         width: 100%;
         background-color: #fff;
     }
+    .main_slider .text_wrapper .slick-list{
+        position: relative;
+    }
     .main_slider .text_wrapper .news-slide__inner{
         position: relative;
         width: 100%;
         height: 100%;
         background: #fff;
+        bottom: 0;
     }
     .main_slider .text_wrapper .text-inner-wrapper{
         width: 100%;
@@ -2141,12 +2184,23 @@ article p > span {
         padding-bottom: 0;
         height: 100%;
         position: relative;
+        padding-top: 0;
+    }
+    .main_slider a.details_link{
+        margin-top: 5px;
+        margin-bottom: 20px;
     }
     .main_slider .text_wrapper .text-inner-wrapper h1{
         margin-bottom: 30px;
     }
     .main_slider .text_wrapper .slick-track{
         height: 220px;
+    }
+    #content .main_slider .slider-nav{
+        transform: translateX(-50px);
+    }
+    #content .main_slider .text_wrapper .slick-track{
+        height: auto;
     }
 }
 

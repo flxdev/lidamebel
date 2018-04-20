@@ -672,7 +672,8 @@ $(document).ready(function() {
 		});
 		$('.text_wrapper').slick({
 			fade: true,
-			arrows: false
+			arrows: false,
+			adaptiveHeight: true
 		});
 		function frameSize(){
 			var fWidth = +$('.border').width(),
