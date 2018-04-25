@@ -3597,7 +3597,27 @@ ul.rating {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.adress_block p,
+.adress_block h1,
+.adress_block h2,
+.adress_block h3,
+.adress_block h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
 .content-article ul li {
     margin-bottom:  10px;
+}
+.content-article ul.list-dots{
+    background: transparent;
+    list-style-type: disc;
+}
+.content-article ul.list-dots li {
+    background: transparent;
+    padding-left: 0;
+}
+.content-article ul.ui-tabs-nav li{
+    background: transparent;
+    padding-left: 0;
 }
