@@ -1,0 +1,45 @@
+.basket_table tr.total td{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+}
+.basket_table tr.total div{
+	text-transform: none;
+	font-size: 20px;
+}
+.total-count{
+	margin-bottom: 10px;
+}
+.discount-loyalty{
+	margin-bottom: 25px;
+}
+p.note-loyalty {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 1.33;
+	color: #a89f9a;
+	float: left;
+	margin: 20px 0 10px 0 !important;
+	vertical-align: middle;
+	text-align: left;
+}
+p.note-loyalty:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media (max-width: 1200px){
+	p.note-loyalty {
+		display: inline-block;
+		width: 100%;
+		max-width: 55%;
+	}
+}
+@media (max-width: 735px){
+	p.note-loyalty {
+		width: 100%;
+		max-width: none;
+		float: none;
+		text-align: right;
+	}
+}

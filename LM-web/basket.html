@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="./css/custom.css" type="text/css"/>
         <link rel="stylesheet" href="./css/resp.css" type="text/css"/>
         <link rel="stylesheet" href="./css/wish.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/newBasket.css" type="text/css"/>
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -420,10 +421,20 @@
                                                 <td><a href="#" class="delete_btn"></a></td>
                                             </tr>
                                             <tr class="total">
-                                                <td colspan="9" class="small-padding tdno8"><span>Итого: 610 500 р</span><p>Без учета доставки</p></td>
+                                                <td colspan="9" class="small-padding tdno8">
+                                                    <!-- новое 07.05.2018 -->
+                                                    <div class="total-count">Товаров на сумму: <span>89 660</span> Р</div>
+                                                    <div class="discount-loyalty">Скидка по программе лояльности*: <span>2</span> %</div>
+                                                    <!-- конец -->
+                                                    <span>Итого: 610 500 р</span>
+                                                    <p>Без учета доставки</p>
+                                                </td>
                                             </tr>
                                         </table>
                                         <div class="bx_ordercart_order_pay_center">
+                                            <!-- новое 07.05.2018 -->
+                                            <p class="note-loyalty">*Скидки по программе лояльности расчитываются в зависимости от стоимости заказа.</p>
+                                            <!-- конец -->
                                             <div class="recalc">
                                                 <button value="Пересчитать" name="BasketRefresh" class="bt2" type="submit"><span>Пересчитать</span></button>
                                             </div>

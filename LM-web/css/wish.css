@@ -517,14 +517,15 @@ body.blur #wrap{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-image: url(../images/prev.png);
+	background-image: url(../images/arr-l.svg);
 	left: -55px;
 	cursor: pointer;
 	top: 50%;
-	transform: translateY(-50%);
+	
+	transform: translateY(-50%) scale(-1,1);
 }
 .preview-modal .arr.left{
-	transform: translateY(-50%) scale(-1,1);
+	transform: translateY(-50%);
 	left: auto;
 	right: -55px;
 }
@@ -559,11 +560,11 @@ body.blur #wrap{
 .preview-modal .preloader{
 	position: absolute;
 	display: block !important;
-	background-color: #fff;
+	background-color: #f4f1ef;
 	bottom: 0;
 	right: 0;
 	z-index: 250;
-	transition: opacity .2s;
+	transition: opacity .1s;
 	transition-delay: 0s;
 	opacity: 1;
 	pointer-events: all;
@@ -653,3 +654,38 @@ body.blur #wrap{
 	width: 100%;
 	height: 0;
 }
+
+/* style for new blocks - .agree-box & .privacy-info*/
+.agree-box .inputs-check__item{
+	position: relative;
+	width: 100%;
+}
+.agree-box .inputs-check__item label{
+	width: auto;
+	box-sizing: border-box;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.popups__inner .agree-box{
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.privacy-info{
+	display: inline-block;
+	position: absolute;
+	top: 260px;
+	right: 12px;
+	width: auto;
+}
+
+@media screen and (max-width: 639px){
+	.privacy-info{
+		position: relative;
+		top: auto;
+		right: auto;
+		margin-top: 10px;
+	}
+}
+/* end new style */

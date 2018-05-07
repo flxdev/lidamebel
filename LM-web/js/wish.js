@@ -140,146 +140,146 @@ function AddressInput(){
 		});
 	});
 }
-// function PreviewPop(el){
-// 	this.el = el;
-// 	this.options = {
-// 		modal: 'preview-popup',
-// 		bodyCls: 'space',
-// 		bodyCls2: 'blur',
-// 		showModal: 'open-modal',
-// 		closeModal: '.closeel',
-// 		contentCont: '.js-prev-popup',
-// 		preload: '.preloader',
-// 		prlCls: 'success',
-// 		arr: ".arr"
-// 	}
-// 	this.prev;
-// 	this.init();
-// }
-// PreviewPop.prototype = {
-// 	init: function(){
-// 		this.body = document.body;
-// 		this.modal = document.getElementById(this.options.modal);
-// 		this.preloader = this.modal.querySelector(this.options.preload);
-// 		this.contentContainer = this.modal.querySelector(this.options.contentCont);
+function PreviewPop(el){
+	this.el = el;
+	this.options = {
+		modal: 'preview-popup',
+		bodyCls: 'space',
+		bodyCls2: 'blur',
+		showModal: 'open-modal',
+		closeModal: '.closeel',
+		contentCont: '.js-prev-popup',
+		preload: '.preloader',
+		prlCls: 'success',
+		arr: ".arr"
+	}
+	this.prev;
+	this.init();
+}
+PreviewPop.prototype = {
+	init: function(){
+		this.body = document.body;
+		this.modal = document.getElementById(this.options.modal);
+		this.preloader = this.modal.querySelector(this.options.preload);
+		this.contentContainer = this.modal.querySelector(this.options.contentCont);
 		
-// 		this.elements = this.el;
-// 		this.eventHandler();
-// 	},
-// 	eventHandler: function(){
-// 		var self = this;
-// 		var lng = this.elements.length;
-// 		for(i = 0; i < lng; i++){
-// 			this.elements[i].addEventListener('click', function(event){
-// 				var val = this.getAttribute('data-target');
-// 				self.openModal(val);
-// 				self.addCloseEvent();
-// 			});
-// 		}
-// 	},
-// 	openModal: function(target){
-// 		this.modal.classList.add(this.options.showModal);
-// 		this.body.classList.add(this.options.bodyCls);
-// 		this.body.classList.add(this.options.bodyCls2);
+		this.elements = this.el;
+		this.eventHandler();
+	},
+	eventHandler: function(){
+		var self = this;
+		var lng = this.elements.length;
+		for(i = 0; i < lng; i++){
+			this.elements[i].addEventListener('click', function(event){
+				var val = this.getAttribute('data-target');
+				self.openModal(val);
+				self.addCloseEvent();
+			});
+		}
+	},
+	openModal: function(target){
+		this.modal.classList.add(this.options.showModal);
+		this.body.classList.add(this.options.bodyCls);
+		this.body.classList.add(this.options.bodyCls2);
 
-// 		if(target != this.prev){
-// 			this.ajxRequest(target);
-// 		}else{
-// 			this.preloader.classList.add(this.options.prlCls);
-// 		}
-// 		this.closeSel = this.modal.querySelector(this.options.closeModal);
-// 	},
-// 	addPrevNext: function(){
-// 		this.arrows = this.modal.querySelectorAll(this.options.arr);
-// 		if(this.arrows.length){
-// 			for(i=0;i<this.arrows.length;i++){
-// 				var arr = this.arrows[i];
-// 				var arrT = arr.getAttribute('data-target');
-// 				console.log(arrT)
-// 				if(arrT === null){
-// 					arr.classList.add('disabled');
-// 				}else{
-// 					this.addClickBlk(arr,arrT);
-// 				}
-// 			}
-// 		}
-// 	},
-// 	addClickBlk: function(elem,target){
-// 		var self = this;
-// 		elem.addEventListener('click',function(event){
-// 			event.preventDefault();
-// 			self.ajxRequest(target);
-// 		});
-// 	},
-// 	addCloseEvent: function(){
-// 		var self = this;
-// 		this.closeSel.onclick = function() {
-// 			self.closeModal();
-// 		}
-// 		this.modal.onclick = function() {
-// 			self.closeModal();
-// 		}
-// 		this.contentContainer.onclick = function(e) {
-// 			e.stopPropagation()
-// 		}
-// 	},
-// 	closeModal: function(){
-// 		var self = this;
-// 		this.modal.classList.remove(this.options.showModal);
-// 		this.body.classList.remove(this.options.bodyCls);
-// 		this.body.classList.remove(this.options.bodyCls2);
-// 		setTimeout(function(){
-// 			self.preloader.classList.remove(self.options.prlCls);
-// 		},300)
-// 	},
-// 	ajxRequest: function(link){
-// 		var self = this;
-// 		var loader = this.preloader;
-// 		var cont = this.contentContainer;
-// 		$.ajax({
-// 			// url: link,
-// 			url: '/bitrix/templates/lidamebel_new/ajax/fast_view.php',
-// 			data: {'ID' : link},
-// 			dataType: "html",
-// 			beforeSend: function(){
-// 				loader.classList.remove(self.options.prlCls);
-// 			},
-// 			error: function(){
+		if(target != this.prev){
+			this.ajxRequest(target);
+		}else{
+			this.preloader.classList.add(this.options.prlCls);
+		}
+		this.closeSel = this.modal.querySelector(this.options.closeModal);
+	},
+	addPrevNext: function(){
+		this.arrows = this.modal.querySelectorAll(this.options.arr);
+		if(this.arrows.length){
+			for(i=0;i<this.arrows.length;i++){
+				var arr = this.arrows[i];
+				var arrT = arr.getAttribute('data-target');
+				console.log(arrT)
+				if(arrT === null){
+					arr.classList.add('disabled');
+				}else{
+					this.addClickBlk(arr,arrT);
+				}
+			}
+		}
+	},
+	addClickBlk: function(elem,target){
+		var self = this;
+		elem.addEventListener('click',function(event){
+			event.preventDefault();
+			self.ajxRequest(target);
+		});
+	},
+	addCloseEvent: function(){
+		var self = this;
+		this.closeSel.onclick = function() {
+			self.closeModal();
+		}
+		this.modal.onclick = function() {
+			self.closeModal();
+		}
+		this.contentContainer.onclick = function(e) {
+			e.stopPropagation()
+		}
+	},
+	closeModal: function(){
+		var self = this;
+		this.modal.classList.remove(this.options.showModal);
+		this.body.classList.remove(this.options.bodyCls);
+		this.body.classList.remove(this.options.bodyCls2);
+		setTimeout(function(){
+			self.preloader.classList.remove(self.options.prlCls);
+		},300)
+	},
+	ajxRequest: function(link){
+		var self = this;
+		var loader = this.preloader;
+		var cont = this.contentContainer;
+		$.ajax({
+			url: link,
+			// url: '/bitrix/templates/lidamebel_new/ajax/fast_view.php',
+			data: {'ID' : link},
+			dataType: "html",
+			beforeSend: function(){
+				loader.classList.remove(self.options.prlCls);
+			},
+			error: function(){
 
-// 			},
-// 			success: function(content) {
-// 				var mainContent = $(content).html();
-// 				$(cont).html(mainContent).promise().done(function(){
-// 					Wish();
-// 					addtobasket();
-// 					var gallery = $('.js-gallery'),
-// 						gallery__pager = $('.gallery__pager');
+			},
+			success: function(content) {
+				var mainContent = $(content).html();
+				$(cont).html(mainContent).promise().done(function(){
+					Wish();
+					// addtobasket();
+					var gallery = $('.js-gallery'),
+						gallery__pager = $('.gallery__pager');
 
-// 					gallery.slick({
-// 						arrows: false,
-// 						asNavFor: '.gallery__pager',
-// 						fade: true,
-// 						swipe: false
-// 					});
-// 					gallery__pager.slick({
-// 						arrows: false,
-// 						slidesToShow: 3,
-// 						slidesToScroll: 3,
-// 						variableWidth: true,
-// 						focusOnSelect: true,
-// 						asNavFor: '.js-gallery'
-// 					});
-// 					setTimeout(function(){
-// 						loader.classList.add(self.options.prlCls);
-// 					},100)
+					gallery.slick({
+						arrows: false,
+						asNavFor: '.gallery__pager',
+						fade: true,
+						swipe: false
+					});
+					gallery__pager.slick({
+						arrows: false,
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						variableWidth: true,
+						focusOnSelect: true,
+						asNavFor: '.js-gallery'
+					});
+					setTimeout(function(){
+						loader.classList.add(self.options.prlCls);
+					},100)
 					
-// 					self.prev = link;
-// 					self.addPrevNext();
-// 				});
-// 			}
-// 		})
-// 	}
-// }
+					self.prev = link;
+					self.addPrevNext();
+				});
+			}
+		})
+	}
+}
 function AddPlacemark(lat,lon,myMap){
 	// с большой вероятностью строчка ниже удалит еще и области, а не только метку
 	myMap.geoObjects.removeAll();
