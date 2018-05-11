@@ -333,9 +333,20 @@ $(document).ready(function () {
 	 });
 	 */
 
-	$('#article').jScrollPane();
 
-	$('#about').jScrollPane();
+	 // change 11.05.2018 
+	if ($('#article').length) {
+		setTimeout(function(){
+			$('#article').jScrollPane();
+		},50);
+	}
+	if ($('#about').length) {
+		setTimeout(function(){
+			$('#about').jScrollPane();
+		},50);
+	}
+	// $('#article').jScrollPane();
+	// $('#about').jScrollPane();
 
 
 	$('.jspScrollable').each(function () {
